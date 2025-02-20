@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/profile', function () {
+    return view('profile');
+})->name('profile');
+
+Route::get('/powerline', function () {
+    return view('powerline');
+})->name('powerline');
+
