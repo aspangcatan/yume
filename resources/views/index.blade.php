@@ -16,7 +16,9 @@
             justify-content: center;
             text-align: center;
             color: white;
+            padding: 20px;
         }
+
         .yume-bg::before {
             content: "";
             position: absolute;
@@ -27,6 +29,7 @@
             background: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(5px);
         }
+
         .hero-content {
             position: relative;
             z-index: 1;
@@ -34,25 +37,97 @@
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            max-width: 90%;
         }
-        .feature-light {
-            background-color: #f8f9fa;
-            padding: 60px 0;
+
+        .feature-light, .feature-dark {
+            padding: 60px 20px;
         }
+
         .feature-dark {
-            background: rgb(242,242,242);
-            padding: 60px 0;
+            background: rgb(242, 242, 242);
         }
+
         .feature-img {
             max-width: 100%;
             border-radius: 10px;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         }
+
+        /* Bullet icon styling */
         .bullet-icon {
             width: 30px;
             height: 30px;
             margin-right: 10px;
         }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .yume-bg {
+                height: auto;
+                padding: 40px 0;
+            }
+
+            .hero-content {
+                padding: 20px;
+                font-size: 14px;
+            }
+
+            .feature-light, .feature-dark {
+                padding: 40px 15px;
+                text-align: center;
+            }
+
+            .feature-light h2, .feature-dark h2 {
+                font-size: 28px;
+            }
+
+            .feature-light p, .feature-dark p {
+                font-size: 16px;
+            }
+
+            .feature-dark ul, .feature-light ul {
+                padding-left: 0;
+            }
+
+            .bullet-icon {
+                width: 25px;
+                height: 25px;
+            }
+
+            .feature-img {
+                max-width: 90%;
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content {
+                padding: 15px;
+                font-size: 12px;
+            }
+
+            .hero-content h1 {
+                font-size: 24px;
+            }
+
+            .hero-content p {
+                font-size: 14px;
+            }
+
+            .feature-light h2, .feature-dark h2 {
+                font-size: 24px;
+            }
+
+            .feature-light p, .feature-dark p {
+                font-size: 14px;
+            }
+
+            .feature-img {
+                max-width: 100%;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -118,7 +193,6 @@
         </div>
     </div>
 </section>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
