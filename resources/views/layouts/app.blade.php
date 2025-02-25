@@ -8,6 +8,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+    
     <style>
         /* Optional: Show loading indicator */
         #loading {
@@ -78,7 +80,6 @@
                 success: function (data) {
                     $("#content").html($(data).find("#content").html()); // Load only #content
                     history.pushState(null, "", url); // Update URL without reloading
-
                 },
                 error: function () {
                     alert("Failed to load content.");
@@ -97,5 +98,6 @@
         };
     });
 </script>
+<script src="{{ asset('javascripts/myjs.js') }}"></script>
 </body>
 </html>

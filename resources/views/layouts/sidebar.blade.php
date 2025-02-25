@@ -15,12 +15,29 @@
        class="flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded">
         <i class="fas fa-music mr-3"></i>Stream Music
     </a>
-    <a href="#" class="flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded">
-        <i class="fas fa-chart-bar mr-3"></i>Rewards Report
-    </a>
-    <a href="#" class="flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded">
-        <i class="fas fa-wallet mr-3"></i>e-Wallet
-    </a>
+    
+    <div class="relative">
+            <button id="submenu-button" class="flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded w-full">
+                <i class="fas fa-chart-bar mr-3"></i>Rewards Report
+                <i id="submenu-icon" class="fas fa-chevron-right ml-auto"></i> <!-- Default right (>) -->
+            </button>
+            <div id="submenu" class="hidden ml-8 mt-2 bg-gray-100 rounded-md shadow-md">
+                <a href="{{ route('directrefferal') }}" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Direct Referral</a>
+                <a href="{{ route('binarycommision') }}" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Binary Commission</a>
+                <a href="{{ route('megamatchingcommision') }}" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Mega Matching Commission</a>
+            </div>
+    </div>
+
+	<div class="relative">
+            <button id="submenu-button-ewallet" class="flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded w-full">
+                <i class="fas fa-chart-bar mr-3"></i>e-wallet
+                <i id="submenu-icon-ewallet" class="fas fa-chevron-right ml-auto"></i> <!-- Default right (>) -->
+            </button>
+            <div id="submenuewallet" class="hidden ml-8 mt-2 bg-gray-100 rounded-md shadow-md">
+                <a href="{{ route('ewalletreport')}}" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">e-Wallet Report</a>
+                <a href="{{ route('ewallettransfer')}}" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">e-Wallet Transfer</a>
+            </div>
+    </div>
     <a href="#" class="flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded">
         <i class="fas fa-money-bill mr-3"></i>Cash Wallet
     </a>
