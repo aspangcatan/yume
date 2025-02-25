@@ -26,27 +26,64 @@ Route::get('/powerline', function () {
 })->name('powerline');
 
 Route::get('/stream', function () {
-    $recommendedSongs = collect([
+    // ✅ Popular Artists with Actual Working Online Images
+    $popularArtists = collect([
         (object)[
-            "id" => 1,
-            "thumbnail" => "eminem.jpg",
-            "title" => "Eminem - Lose Yourself",
-            "artist" => "Eminem"
-        ], (object)[
-            "id" => 1,
-            "thumbnail" => "eminem.jpg",
-            "title" => "Eminem - I'm not Afraid",
-            "artist" => "Eminem"
-        ], (object)[
-            "id" => 1,
-            "thumbnail" => "eminem.jpg",
-            "title" => "Eminem - Mockingbird",
-            "artist" => "Eminem"
+            "name" => "Eminem",
+            "image" => "https://lastfm.freetls.fastly.net/i/u/300x300/b17d1e6aa4e8437490547db2ea0e94ca.png"
+        ],
+        (object)[
+            "name" => "Taylor Swift",
+            "image" => "https://lastfm.freetls.fastly.net/i/u/300x300/09d53640c27b4a309f7c98253c91b2c7.png"
         ]
     ]);
 
-    return view('stream', compact('recommendedSongs'));
+    // ✅ Most Listened Songs with Working Online Covers
+    $mostListenedSongs = collect([
+        (object)[
+            "id" => 1,
+            "thumbnail" => "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/32/c6/1d/32c61dd5-d586-3d63-1e56-42ccff0fc404/00602547211419.rgb.jpg/600x600bb.jpg",
+            "title" => "Lose Yourself",
+            "artist" => "Eminem"
+        ],
+        (object)[
+            "id" => 2,
+            "thumbnail" => "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/a6/b1/d1/a6b1d18d-7ff4-1b85-1756-4bc95b473bdb/00602567723847.rgb.jpg/600x600bb.jpg",
+            "title" => "Shake It Off",
+            "artist" => "Taylor Swift"
+        ]
+    ]);
+
+    // ✅ Recommended Songs with Working Online Images
+    $recommendedSongs = collect([
+        (object)[
+            "id" => 6,
+            "thumbnail" => "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/92/0b/f1/920bf1a2-d949-42c1-f4fd-37c3dbce3647/00602547535462.rgb.jpg/600x600bb.jpg",
+            "title" => "Without Me",
+            "artist" => "Eminem"
+        ],
+        (object)[
+            "id" => 7,
+            "thumbnail" => "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/56/72/d8/5672d873-618c-b62a-22a4-169368d6fdde/00602567723847.rgb.jpg/600x600bb.jpg",
+            "title" => "Blank Space",
+            "artist" => "Taylor Swift"
+        ],
+        (object)[
+            "id" => 8,
+            "thumbnail" => "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/13/85/63/138563e4-11a5-5d2b-024f-167d49b9a447/00602567379847.rgb.jpg/600x600bb.jpg",
+            "title" => "In My Feelings",
+            "artist" => "Drake"
+        ]
+    ]);
+
+    return view('stream', compact('popularArtists', 'mostListenedSongs', 'recommendedSongs'));
 })->name('stream');
+
+Route::get('/watch', function () {
+
+    return view('watch');
+})->name('watch');
+
 
 Route::get('/get-song/{id}', function ($id) {
     $song = (object)[
@@ -55,8 +92,11 @@ Route::get('/get-song/{id}', function ($id) {
         'youtube_id' => "45xpqOPbFdQ"
     ];
 
-    return response()->json($song);
-});
+    return response()->json($song)
+        ->header('Access-Control-Allow-Origin', '*')
+        ->header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+        ->header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+})->name('getSong');
 
 Route::get('/rewardsReport/directrefferal', function () {
     return view('rewardsReport.directrefferal'); // Include folder in the view path
