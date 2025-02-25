@@ -58,3 +58,22 @@ Route::get('/get-song/{id}', function ($id) {
     return response()->json($song);
 });
 
+Route::get('/rewardsReport/directrefferal', function () {
+    return view('rewardsReport.directrefferal'); // Include folder in the view path
+})->name('directrefferal');
+
+Route::get('/rewardsReport/binarycommision', function () {
+    return view('rewardsReport.binarycommision');
+})->name('binarycommision');
+
+Route::get('/rewardsReport/megamatchingcommision', function () {
+    return view('rewardsReport.megamatchingcommision');
+})->name('megamatchingcommision');
+
+Route::get('/ewallet/ewalletreport', function () {
+    return view('ewallet.ewalletreport');
+})->name('ewalletreport');
+
+Route::get('/ewallet/ewallettransfer', function () {
+    return view('ewallet.ewallettransfer');
+})->name('ewallettransfer');
