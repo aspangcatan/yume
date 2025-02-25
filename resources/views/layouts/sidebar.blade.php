@@ -1,6 +1,7 @@
 <div id="sidebar"
-     class="fixed top-0 left-0 bg-white shadow-md py-6 px-6 w-64 h-full transform -translate-x-full transition-transform md:translate-x-0 md:fixed md:h-full md:w-64">
-    <a href="#" class="flex items-center text-gray-600 hover:text-gray-900 py-2 px-2 rounded active">
+     class="fixed top-0 left-0 bg-white shadow-md py-6 px-6 w-64 h-screen overflow-y-auto transform -translate-x-full transition-transform md:translate-x-0 md:fixed md:w-64">
+
+<a href="#" class="flex items-center text-gray-600 hover:text-gray-900 py-2 px-2 rounded active">
         <i class="fas fa-tachometer-alt mr-3"></i>Dashboard
     </a>
     <a href="{{ route('powerline') }}"
@@ -15,7 +16,7 @@
        class="flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded">
         <i class="fas fa-music mr-3"></i>Stream Music
     </a>
-    
+
     <div class="relative">
             <button id="submenu-button" class="flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded w-full">
                 <i class="fas fa-chart-bar mr-3"></i>Rewards Report
