@@ -135,6 +135,6 @@
     }
 
 </script>
-<script src="{{ asset('javascripts/myjs.js') }}"></script>
+<script src="{{ asset('javascripts/myjs.js') }}?v={{ time() }}"></script>
 </body>
 </html>
