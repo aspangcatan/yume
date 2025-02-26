@@ -18,7 +18,22 @@ Route::get('/', function () {
 });
 
 Route::get('/profile', function () {
-    return view('profile');
+    $user =
+        (object)[
+            "full_name" => "Asnaui O. Pangcatan",
+            "referrals_count" => 5,
+            "rank" => "Pre-Enrolle",
+            "member_id" => 12122388,
+            "username" => "apangcatan",
+            "email" => "naui.pangcatan@gmail.com",
+            "contact" => "+639995249718",
+            "gender" => "Male",
+            "address" => "San Isidro",
+            "city" => "San Isidro",
+            "state" => "San Isidro",
+            "country" => "San Isidro",
+        ];
+    return view('profile', compact('user'));
 })->name('profile');
 
 Route::get('/powerline', function () {
