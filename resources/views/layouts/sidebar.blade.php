@@ -95,7 +95,7 @@
                 <a href="{{ route('rejectedwithdrawal')}}" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Rejected Withdrawal</a>
             </div>
     </div>
-    <a href="#" class="noChildren flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded">
+    <a href="#" id="networkViewer" class="noChildren flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded">
         <i class="fas fa-network-wired mr-3"></i>Network Viewer
     </a>
     <a href="#" class="noChildren flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded">
@@ -113,7 +113,7 @@
     <a href="#" class="noChildren flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded">
         <i class="fas fa-bullhorn mr-3"></i>Announcements
     </a>
-    <a href="#" class="noChildren flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded">
+    <a href="{{ route('login') }}" onclick="window.location.href=this.href; return false;" class="noChildren flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded">
         <i class="fas fa-sign-out-alt mr-3"></i>Logout
     </a>
 </div>
