@@ -1,32 +1,28 @@
 $(document).ready(function () {
-    $("#submenu-button").click(function () {
-        let submenu = $("#submenu");
-        let icon = $("#submenu-icon");
 
+    $(".noChildren").click(function(){
+        $(".submenu-icon").removeClass("fa-chevron-down").addClass("fa-chevron-right");
+        $(".submenu").slideUp(300);
+    });
+
+    $(".submenu-button").click(function () {
+        var submenu = $(this).next(".submenu");
+        $(".submenu-icon").removeClass("fa-chevron-down").addClass("fa-chevron-right");
+
+        var iconID = $(this).find(".submenu-icon").attr("id"); // Get the ID of the <i>
+    
+        // Hide all other submenus except the clicked one
+        $(".submenu").not(submenu).slideUp(300);
+    
         // Slide toggle animation with a callback to change the icon
         submenu.stop().slideToggle(300, function () {
             if (submenu.is(":visible")) {
-                icon.removeClass("fa-chevron-right").addClass("fa-chevron-down");
+                $('#'+iconID).removeClass("fa-chevron-right").addClass("fa-chevron-down");
             } else {
-                icon.removeClass("fa-chevron-down").addClass("fa-chevron-right");
+                $('#'+iconID).removeClass("fa-chevron-down").addClass("fa-chevron-right");
             }
         });
     });
-});
-
-$(document).ready(function () {
-    $("#submenu-button-ewallet").click(function () {
-        let submenu = $("#submenuewallet");
-        let icon = $("#submenu-icon-ewallet");
-
-        // Slide toggle animation with a callback to change the icon
-        submenu.stop().slideToggle(300, function () {
-            if (submenu.is(":visible")) {
-                icon.removeClass("fa-chevron-right").addClass("fa-chevron-down");
-            } else {
-                icon.removeClass("fa-chevron-down").addClass("fa-chevron-right");
-            }
-        });
-    });
+    
 });
 
