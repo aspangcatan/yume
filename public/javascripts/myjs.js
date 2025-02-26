@@ -23,6 +23,21 @@ $(document).ready(function () {
             }
         });
     });
+
+    $('#networkViewer').on('click', function(){
+        Swal.fire({
+            icon: 'warning', // Can be 'success', 'error', 'warning', 'info', or 'question'
+            title: 'Access Denied',
+            text: 'Access exclusively for those who have upgraded and placed in Binary Tree.',
+            confirmButtonText: 'OK',
+            confirmButtonColor: '#d33'
+        });        
+    });
+    
+    $('#loginbtn').on('click', function() {
+        let url = $(this).data('url'); // Get route from data-url attribute
+        window.location.href = url;
+    });
     
 });
 
