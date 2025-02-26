@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
-    
+
     <style>
         /* Optional: Show loading indicator */
         #loading {
@@ -24,18 +24,27 @@
             border-radius: 5px;
         }
 
+        .no-scroll {
+            overflow: hidden;
+        }
+
+        #sidebar {
+            height: 100vh; /* Ensures the sidebar is the full height of the viewport */
+            overflow-y: auto; /* Enables scrolling within the sidebar */
+        }
+
+        .submenu {
+            display: none; /* Initially hidden */
+        }
+
+        .submenu.open {
+            display: block; /* Show submenu when toggled */
+        }
+
         a.active{
             background: rgb(229,231,235);
         }
     </style>
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            const overlay = document.getElementById('overlay');
-            sidebar.classList.toggle('-translate-x-full');
-            overlay.classList.toggle('hidden');
-        }
-    </script>
 </head>
 <body class="min-h-screen bg-gray-100">
 <div class="flex">
@@ -55,8 +64,7 @@
         </nav>
 
         <!-- Main Content -->
-        <div class="p-6">
-
+        <div class="p-4">
             <div id="loading">Loading...</div>
             <div id="content">
                 @yield('content')
@@ -66,37 +74,66 @@
 </div>
 <script>
     $(document).ready(function () {
-        $("a").on("click", function (e) {
+        $(".has-submenu").on("click", function (e) {
             e.preventDefault();
-            $("a").removeClass("active");
+            let submenu = $(this).next(".submenu");
+
+            // Close all other submenus
+            $(".submenu").not(submenu).removeClass("open");
+
+            submenu.toggleClass("open");
+
+            // Ensure sidebar remains scrollable
+            $("#sidebar").scrollTop($("#sidebar")[0].scrollHeight);
+        });
+
+        $("#sidebar a").on("click", function (e) {
+            e.preventDefault();
+            $("#sidebar a").removeClass("active");
             $(this).addClass("active");
             var url = $(this).attr("href");
             toggleSidebar();
-            $("#loading").show(); // Show loading indicator
+            $("#loading").fadeIn();
 
             $.ajax({
                 url: url,
                 type: "GET",
                 success: function (data) {
-                    $("#content").html($(data).find("#content").html()); // Load only #content
-                    history.pushState(null, "", url); // Update URL without reloading
+                    $("#content").fadeOut(200, function () {
+                        $(this).html($(data).find("#content").html()).fadeIn(200);
+                        history.pushState(null, "", url);
+                    });
                 },
                 error: function () {
-                    alert("Failed to load content.");
+                    Swal.fire("Error", "Failed to load content.", "error");
                 },
                 complete: function () {
-                    $("#loading").hide();
+                    $("#loading").fadeOut();
                 }
             });
         });
 
-        // Handle back/forward navigation
         window.onpopstate = function () {
             $.get(location.href, function (data) {
                 $("#content").html($(data).find("#content").html());
             });
         };
     });
+
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        sidebar.classList.toggle('-translate-x-full');
+        overlay.classList.toggle('hidden');
+
+        // Prevent scrolling when sidebar is open
+        if (!sidebar.classList.contains('-translate-x-full')) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+    }
+
 </script>
 <script src="{{ asset('javascripts/myjs.js') }}"></script>
 </body>

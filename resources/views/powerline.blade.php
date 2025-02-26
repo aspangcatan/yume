@@ -4,8 +4,7 @@
     <div class="bg-white shadow-md rounded-lg p-6">
         <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-6 rounded-lg shadow-md">
             <div class="text-right mb-4">
-                <h5 class="text-lg font-semibold">🎉 Congratulations <span
-                        class="font-bold">Asnaui Optina Pangcatan</span>!</h5>
+                <h5 class="text-lg font-semibold">🎉 Congratulations <span class="font-bold">Asnaui Optina Pangcatan</span>!</h5>
                 <p class="text-sm text-gray-800 mt-2"><strong>5 Streamer</strong> and <strong>0 PAID Members</strong>
                     have <strong>ALREADY</strong> joined after <strong>YOU</strong> in the POWERLINE, and it is <strong>STILL
                         GROWING</strong>! 🚀</p>
