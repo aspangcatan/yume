@@ -132,3 +132,73 @@ Route::get('/ewallet/ewalletreport', function () {
 Route::get('/ewallet/ewallettransfer', function () {
     return view('ewallet.ewallettransfer');
 })->name('ewallettransfer');
+
+Route::get('/cashwallet/cashwalletreport', function () {
+    return view('cashwallet.cashwalletreport');
+})->name('cashwalletreport');
+
+Route::get('/cashwallet/cashwallettransfer', function () {
+    return view('cashwallet.cashwallettransfer');
+})->name('cashwallettransfer');
+
+Route::get('/cashwallet/canceledtopup', function () {
+    return view('cashwallet.canceledtopup');
+})->name('canceledtopup');
+
+Route::get('/cashwallet/approvetopup', function () {
+    return view('cashwallet.approvetopup');
+})->name('approvetopup');
+
+Route::get('/cashwallet/cashwallettopuprequest', function () {
+    return view('cashwallet.cashwallettopuprequest');
+})->name('cashwallettopuprequest');
+
+Route::get('/cashwallet/pendingtopup', function () {
+    return view('cashwallet.pendingtopup');
+})->name('pendingtopup');
+
+Route::get('/streamingpoint/streamingpointreport', function () {
+    return view('streamingpoint.streamingpointreport');
+})->name('streamingpointreport');
+
+Route::get('/rewardpoints/rewardpointsreport', function () {
+    return view('rewardpoints.rewardpointsreport');
+})->name('rewardpointsreport');
+
+Route::get('/ecodemanagement/activatedecode', function () {
+    return view('ecodemanagement.activatedecode');
+})->name('activatedecode');
+
+Route::get('/ecodemanagement/activeecode', function () {
+    return view('ecodemanagement.activeecode');
+})->name('activeecode');
+
+Route::get('/ecodemanagement/deactivatedecode', function () {
+    return view('ecodemanagement.deactivatedecode');
+})->name('deactivatedecode');
+
+Route::get('/ecodemanagement/ecodecreation', function () {
+    return view('ecodemanagement.ecodecreation');
+})->name('ecodecreation');
+
+Route::get('/ecodemanagement/ecodecreation', function () {
+    return view('ecodemanagement.ecodecreation');
+})->name('ecodecreation');
+
+Route::get('/withdrawal/approvedwithdrawal', function () {
+    return view('withdrawal.approvedwithdrawal');
+})->name('approvedwithdrawal');
+
+Route::get('/withdrawal/pendingwithdrawal', function () {
+    return view('withdrawal.pendingwithdrawal');
+})->name('pendingwithdrawal');
+
+Route::get('/withdrawal/rejectedwithdrawal', function () {
+    return view('withdrawal.rejectedwithdrawal');
+})->name('rejectedwithdrawal');
+
+Route::get('/withdrawal/withdrawalrequest', function () {
+    return view('withdrawal.withdrawalrequest');
+})->name('withdrawalrequest');
+
+
