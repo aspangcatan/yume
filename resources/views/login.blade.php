@@ -9,6 +9,18 @@
         #slider {
             cursor: grab;
         }
+
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: url('{{ asset('img/bgloginpage.png') }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            overflow-y: hidden;
+        }
+
     </style>
 
     <!-- scripts here -->
@@ -17,9 +29,9 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
-    
+
 </head>
-<body class="h-screen flex flex-col bg-[url('{{ asset('img/bgloginpage.png') }}')] bg-cover bg-center">
+<body>
     <!-- Sticky Header -->
     <header class="bg-black text-white p-4 fixed top-0 left-0 w-full z-10">
         <div class="container mx-auto flex justify-between items-center">
@@ -28,17 +40,17 @@
             </a>
             <nav>
                 <ul class="flex space-x-6 uppercase text-sm">
-                    <li><a href="#" class="hover:text-orange-400">Home</a></li>
+                    <li><a href="{{ route('index') }}" class="hover:text-orange-400">Home</a></li>
                     <li><a href="#" class="hover:text-orange-400">Publishing</a></li>
                     <li><a href="#" class="hover:text-orange-400">Affiliate</a></li>
                     <li><a href="#" class="hover:text-orange-400">Rewards</a></li>
                     <li><a href="#" class="hover:text-orange-400">FAQ</a></li>
-                    <li><a href="#" class="hover:text-orange-400">Sign In</a></li>
+                    <li><a href="{{ route('login') }}" class="hover:text-orange-400">Sign In</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    
+
     <!-- Main Content -->
     <main class="flex-grow flex items-center justify-center p-10 mt-16">
         <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
@@ -107,7 +119,7 @@
      <!-- Forgot Password Modal -->
      <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" id="forgotPasswordModal">
         <div class="bg-white w-full max-w-md p-6 rounded-lg shadow-lg">
-            
+
             <!-- Header -->
             <div class="bg-black text-white text-center py-3 rounded-t-md text-lg font-semibold">
                 Forgot Password?
@@ -116,7 +128,7 @@
             <!-- Form -->
             <div class="p-6">
                 <input type="text" placeholder="Username or Email" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400">
-                
+
                 <!-- Notes Section -->
                 <div class="mt-4 text-sm">
                     <p class="font-bold text-red-600">Notes:</p>
