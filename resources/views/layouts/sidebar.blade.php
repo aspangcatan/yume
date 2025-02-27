@@ -1,17 +1,40 @@
 <div id="sidebar"
      class="fixed top-0 left-0 bg-white shadow-md py-6 px-6 w-64 h-screen overflow-y-auto transform -translate-x-full transition-transform md:translate-x-0 md:fixed md:w-64">
-
-    <a href="#" class="noChildren flex items-center text-gray-600 hover:text-gray-900 py-2 px-2 rounded active">
-        <i class="fas fa-tachometer-alt mr-3"></i>Dashboard
-    </a>
     <a href="{{ route('powerline') }}"
        class="noChildren flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded">
         <i class="fas fa-sitemap mr-3"></i>My Powerline
     </a>
+    <div class="relative">
+        <button id="submenu-button-crm" class="submenu-button flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded w-full">
+            <i class="fas fa-user-tie mr-3"></i>CRM
+            <i id="submenu-icon-crm" class="submenu-icon fas {{ request()->routeIs('crm.dashboard') || request()->routeIs('crm.customers') || request()->routeIs('crm.leads') || request()->routeIs('crm.deals') ? 'fa-chevron-down' : 'fa-chevron-right' }} ml-auto"></i>
+        </button>
+        <div id="submenucrm" class="submenu {{ request()->routeIs('crm.dashboard') || request()->routeIs('crm.customers') || request()->routeIs('crm.leads') || request()->routeIs('crm.deals') ? 'block' : 'hidden' }} ml-8 mt-2 bg-gray-100 rounded-md shadow-md">
+            <a href="{{ route('crm.dashboard') }}" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Dashboard</a>
+            <a href="{{ route('crm.customers') }}" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Customers</a>
+            <a href="{{ route('crm.leads') }}" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Leads</a>
+            <a href="{{ route('crm.deals') }}" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Deals</a>
+        </div>
+    </div>
+
+    <div class="relative">
+        <button id="submenu-button-crm" class="submenu-button flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded w-full">
+            <i class="fas fa-user-tie mr-3"></i>SFA
+            <i id="submenu-icon-crm" class="submenu-icon fas {{ request()->routeIs('sfa.dashboard') ||  request()->routeIs('sfa.activities') || request()->routeIs('sfa.tasks') || request()->routeIs('sfa.calendar') ? 'fa-chevron-down' : 'fa-chevron-right' }} ml-auto"></i>
+        </button>
+        <div id="submenucrm" class="submenu {{ request()->routeIs('sfa.dashboard') || request()->routeIs('sfa.activities') || request()->routeIs('sfa.tasks') || request()->routeIs('sfa.calendar') ? 'block' : 'hidden' }} ml-8 mt-2 bg-gray-100 rounded-md shadow-md">
+            <a href="{{ route('sfa.dashboard') }}" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Dashboard</a>
+            <a href="{{ route('sfa.activities') }}" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Activities</a>
+            <a href="{{ route('sfa.tasks') }}" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Tasks</a>
+            <a href="{{ route('sfa.calendar') }}" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Calendar</a>
+        </div>
+    </div>
+
     <a href="{{ route('profile') }}"
        class="noChildren flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded">
         <i class="fas fa-user mr-3"></i>Profile
     </a>
+
     <a href="{{ route('stream') }}"
        class="noChildren flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded">
         <i class="fas fa-music mr-3"></i>Stream Music
@@ -20,9 +43,9 @@
     <div class="relative">
             <button id="submenu-button" class="submenu-button flex items-center text-gray-600 hover:bg-gray-200 hover:text-gray-900 py-2 px-2 rounded w-full">
                 <i class="fas fas fa-award mr-3"></i>Rewards Report
-                <i id="submenu-icon" class="submenu-icon fas {{ request()->routeIs('directrefferal') || request()->routeIs('binarycommision') || request()->routeIs('megamatchingcommision') ? 'fa-chevron-down' : 'fa-chevron-right' }} ml-auto"></i> 
+                <i id="submenu-icon" class="submenu-icon fas {{ request()->routeIs('directrefferal') || request()->routeIs('binarycommision') || request()->routeIs('megamatchingcommision') ? 'fa-chevron-down' : 'fa-chevron-right' }} ml-auto"></i>
             </button>
-            <div id="submenu" class="submenu {{ request()->routeIs('directrefferal') || request()->routeIs('binarycommision') || request()->routeIs('megamatchingcommision') ? 'block' : 'hidden' }} ml-8 mt-2 bg-gray-100 rounded-md shadow-md"> 
+            <div id="submenu" class="submenu {{ request()->routeIs('directrefferal') || request()->routeIs('binarycommision') || request()->routeIs('megamatchingcommision') ? 'block' : 'hidden' }} ml-8 mt-2 bg-gray-100 rounded-md shadow-md">
                 <a href="{{ route('directrefferal') }}" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Direct Referral</a>
                 <a href="{{ route('binarycommision') }}" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Binary Commission</a>
                 <a href="{{ route('megamatchingcommision') }}" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Mega Matching Commission</a>

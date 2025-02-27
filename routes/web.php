@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CrmController;
+use App\Http\Controllers\SfaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -209,4 +211,16 @@ Route::get('/withdrawal/withdrawalrequest', function () {
     return view('withdrawal.withdrawalrequest');
 })->name('withdrawalrequest');
 
+Route::prefix('crm')->group(function () {
+    Route::get('/dashboard', [CrmController::class, 'dashboard'])->name('crm.dashboard');
+    Route::get('/customers', [CrmController::class, 'customers'])->name('crm.customers');
+    Route::get('/leads', [CrmController::class, 'leads'])->name('crm.leads');
+    Route::get('/deals', [CrmController::class, 'deals'])->name('crm.deals');
+});
 
+Route::prefix('sfa')->group(function () {
+    Route::get('/dashboard', [SfaController::class, 'dashboard'])->name('sfa.dashboard');
+    Route::get('/activities', [SfaController::class, 'activities'])->name('sfa.activities');
+    Route::get('/tasks', [SfaController::class, 'tasks'])->name('sfa.tasks');
+    Route::get('/calendar', [SfaController::class, 'calendar'])->name('sfa.calendar');
+});

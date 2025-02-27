@@ -39,37 +39,37 @@
         </div>
     </div>
     <div class="bg-white shadow-md rounded-lg p-6 mt-2">
-        <div class="max-w-6xl mx-auto p-6 bg-white rounded-lg">
+        <div class="bg-white rounded-lg">
             <h2 class="text-xl font-semibold text-gray-800 mb-4">My Powerline</h2>
             <div class="overflow-x-auto">
-                <table class="w-full border-collapse border border-gray-300 text-sm">
-                    <thead>
+                <table class="w-full table-auto border-collapse border border-gray-200">
+                    <thead class="bg-gray-100">
                     <tr class="bg-gray-100 text-gray-700">
-                        <th class="border border-gray-300 px-4 py-2 text-center w-1/12">No.</th>
-                        <th class="border border-gray-300 px-4 py-2 text-center w-3/12">Full Name</th>
-                        <th class="border border-gray-300 px-4 py-2 text-center w-2/12">Type</th>
-                        <th class="border border-gray-300 px-4 py-2 text-center w-2/12">Country</th>
-                        <th class="border border-gray-300 px-4 py-2 text-center w-4/12">Join Date Time</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left w-1/12">No.</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left w-3/12">Full Name</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left w-2/12">Type</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left w-2/12">Country</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left w-4/12">Join Date Time</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
-                        <td class="border border-gray-300 px-4 py-2 text-center">1</td>
-                        <td class="border border-gray-300 px-4 py-2 text-center">Asnaui Optina Pangcatan</td>
-                        <td class="border border-gray-300 px-4 py-2 text-center">Pre-enrollee</td>
-                        <td class="border border-gray-300 px-4 py-2 text-center">
+                        <td class="border border-gray-200 px-4 py-2 text-left">1</td>
+                        <td class="border border-gray-200 px-4 py-2 text-left">Asnaui Optina Pangcatan</td>
+                        <td class="border border-gray-200 px-4 py-2 text-left">Pre-enrollee</td>
+                        <td class="border border-gray-200 px-4 py-2 text-left">
                             <img src="images/countryflags/ph.gif" class="inline-block w-5" alt="Philippines">
                         </td>
-                        <td class="border border-gray-300 px-4 py-2 text-center">Wed, 19 Feb 2025<br>05:51:35 am</td>
+                        <td class="border border-gray-200 px-4 py-2 text-left">Wed, 19 Feb 2025<br>05:51:35 am</td>
                     </tr>
                     <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
-                        <td class="border border-gray-300 px-4 py-2 text-center">2</td>
-                        <td class="border border-gray-300 px-4 py-2 text-center">Samuel Nwaliegu</td>
-                        <td class="border border-gray-300 px-4 py-2 text-center">Pre-enrollee</td>
-                        <td class="border border-gray-300 px-4 py-2 text-center">
+                        <td class="border border-gray-200 px-4 py-2 text-left">2</td>
+                        <td class="border border-gray-200 px-4 py-2 text-left">Samuel Nwaliegu</td>
+                        <td class="border border-gray-200 px-4 py-2 text-left">Pre-enrollee</td>
+                        <td class="border border-gray-200 px-4 py-2 text-left">
                             <img src="images/countryflags/ng.gif" class="inline-block w-5" alt="Nigeria">
                         </td>
-                        <td class="border border-gray-300 px-4 py-2 text-center">Wed, 19 Feb 2025<br>05:03:11 pm</td>
+                        <td class="border border-gray-200 px-4 py-2 text-left">Wed, 19 Feb 2025<br>05:03:11 pm</td>
                     </tr>
                     <!-- Add more rows as needed -->
                     </tbody>
