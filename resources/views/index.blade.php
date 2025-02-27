@@ -34,8 +34,8 @@
         </button>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-gray-900 md:hidden">
-            <nav class="flex flex-col items-center space-y-4 py-4">
+        <div id="mobile-menu" class="hidden z-50 absolute top-16 left-0 w-full bg-gray-900 md:hidden">
+        <nav class="flex flex-col items-center space-y-4 py-4">
                 <a href="{{ route('index') }}" class="hover:text-blue-400">Home</a>
                 <a href="#" class="hover:text-blue-400">Publishing</a>
                 <a href="#" class="hover:text-blue-400">Affiliate</a>
@@ -370,6 +370,13 @@
         </div>
     </div>
 </footer>
+<script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
 
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
 </body>
 </html>
