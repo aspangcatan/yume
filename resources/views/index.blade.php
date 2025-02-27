@@ -11,19 +11,19 @@
     <div class="container mx-auto flex items-center justify-between py-4 px-6">
         <!-- Logo Section -->
         <div class="flex items-center space-x-3">
-            <a href="index.php" rel="home">
+            <a href="{{ route('index') }}" rel="home">
                 <img src="{{ asset('img/yumeglobal-logo.png') }}" alt="YUME" class="h-9">
             </a>
         </div>
 
         <!-- Navigation Menu -->
         <nav class="hidden md:flex space-x-6">
-            <a href="index.php" class="hover:text-blue-400">Home</a>
+            <a href="{{ route('index') }}" class="hover:text-blue-400">Home</a>
             <a href="publishing.php" class="hover:text-blue-400">Publishing</a>
             <a href="plan.php" class="hover:text-blue-400">Affiliate</a>
             <a href="rewards.php" class="hover:text-blue-400">Rewards</a>
             <a href="faq.php" class="hover:text-blue-400">FAQ</a>
-            <a href="login.php" class="hover:text-blue-400 font-semibold">Sign In</a>
+            <a href="{{ route('login') }}" class="hover:text-blue-400 font-semibold">Sign In</a>
         </nav>
 
         <!-- Mobile Menu Button -->
@@ -36,12 +36,12 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-gray-900 md:hidden">
             <nav class="flex flex-col items-center space-y-4 py-4">
-                <a href="index.php" class="hover:text-blue-400">Home</a>
-                <a href="publishing.php" class="hover:text-blue-400">Publishing</a>
-                <a href="plan.php" class="hover:text-blue-400">Affiliate</a>
-                <a href="rewards.php" class="hover:text-blue-400">Rewards</a>
-                <a href="faq.php" class="hover:text-blue-400">FAQ</a>
-                <a href="login.php" class="hover:text-blue-400 font-semibold">Sign In</a>
+                <a href="{{ route('index') }}" class="hover:text-blue-400">Home</a>
+                <a href="#" class="hover:text-blue-400">Publishing</a>
+                <a href="#" class="hover:text-blue-400">Affiliate</a>
+                <a href="#" class="hover:text-blue-400">Rewards</a>
+                <a href="#" class="hover:text-blue-400">FAQ</a>
+                <a href="{{ route('login') }}" class="hover:text-blue-400 font-semibold">Sign In</a>
             </nav>
         </div>
     </div>
@@ -343,7 +343,7 @@
         <div class="container mx-auto">
             <p class="text-sm">
                 2025 © Copyright
-                <a href="https://www.yume.global/index.php" class="text-blue-400 hover:underline">YUME</a>,
+                <a href="https://www.yume.global/{{ route('index') }}" class="text-blue-400 hover:underline">YUME</a>,
                 - All rights reserved. |
                 <a href="contact-us.php" class="text-blue-400 hover:underline">Contact</a> |
                 <a href="faq.php" class="text-blue-400 hover:underline">FAQ</a> |
