@@ -76,7 +76,10 @@
             </div>
 
             <!-- SUBMIT BUTTON -->
-            <button id="loginbtn" data-url="{{ route('authentication') }}" class="w-full mt-4 bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600">Submit</button>
+            <a href="{{ route('authentication') }}"
+               class="w-full mt-4 bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 text-center block cursor-pointer">
+                Submit
+            </a>
 
             <div class="text-center mt-3">
                 <a id="openModalBtn" href="#" class="text-sm text-gray-600 hover:underline">Forgot Password?</a>
