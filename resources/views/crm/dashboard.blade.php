@@ -6,31 +6,25 @@
             <h2 class="text-2xl font-bold mb-4">CRM Dashboard</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <!-- Example Widget 1 -->
-                <div class="bg-blue-500 text-white rounded-lg p-4 flex items-center">
-                    <i class="fas fa-users text-3xl"></i>
+                <div class="bg-blue-100 border-l-4 border-blue-500 rounded-lg p-4 flex items-center">
+                    <i class="fas fa-users text-blue-500 text-3xl"></i>
                     <div class="ml-4">
-                        <p class="text-lg">Total Customers</p>
+                        <h3 class="font-semibold text-lg text-blue-800">Total Customers</h3>
                         <p class="text-2xl font-bold">1,234</p>
                     </div>
                 </div>
 
+
                 <!-- Example Widget 2 -->
-                <div class="bg-green-500 text-white rounded-lg p-4 flex items-center">
-                    <i class="fas fa-dollar-sign text-3xl"></i>
+                <div class="bg-green-100 border-l-4 border-green-500 rounded-lg p-4 flex items-center">
+                    <i class="fas fa-dollar-sign text-green-500 text-3xl"></i>
                     <div class="ml-4">
-                        <p class="text-lg">Total Sales</p>
+                        <h3 class="font-semibold text-lg text-green-800">Total Sales</h3>
                         <p class="text-2xl font-bold">$45,678</p>
                     </div>
                 </div>
 
-                <!-- Example Widget 3 -->
-                <div class="bg-yellow-500 text-white rounded-lg p-4 flex items-center">
-                    <i class="fas fa-chart-line text-3xl"></i>
-                    <div class="ml-4">
-                        <p class="text-lg">Monthly Growth</p>
-                        <p class="text-2xl font-bold">12.5%</p>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

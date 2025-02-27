@@ -1,10 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="bg-white shadow-md rounded-lg p-6">
+    <div class="bg-white shadow-md rounded-lg">
         <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-6 rounded-lg shadow-md">
             <div class="text-right mb-4">
-                <h5 class="text-lg font-semibold">🎉 Congratulations <span class="font-bold">Asnaui Optina Pangcatan</span>!</h5>
+                <h5 class="text-lg font-semibold">🎉 Congratulations <span
+                        class="font-bold">Asnaui Optina Pangcatan</span>!</h5>
                 <p class="text-sm text-gray-800 mt-2"><strong>5 Streamer</strong> and <strong>0 PAID Members</strong>
                     have <strong>ALREADY</strong> joined after <strong>YOU</strong> in the POWERLINE, and it is <strong>STILL
                         GROWING</strong>! 🚀</p>
@@ -38,18 +39,21 @@
             </p>
         </div>
     </div>
+
     <div class="bg-white shadow-md rounded-lg p-6 mt-2">
+
+
         <div class="bg-white rounded-lg">
             <h2 class="text-xl font-semibold text-gray-800 mb-4">My Powerline</h2>
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto bg-white rounded-lg shadow">
                 <table class="w-full table-auto border-collapse border border-gray-200">
                     <thead class="bg-gray-100">
                     <tr class="bg-gray-100 text-gray-700">
                         <th class="border border-gray-200 px-4 py-2 text-left w-1/12">No.</th>
-                        <th class="border border-gray-200 px-4 py-2 text-left w-3/12">Full Name</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left w-5/12">Full Name</th>
                         <th class="border border-gray-200 px-4 py-2 text-left w-2/12">Type</th>
                         <th class="border border-gray-200 px-4 py-2 text-left w-2/12">Country</th>
-                        <th class="border border-gray-200 px-4 py-2 text-left w-4/12">Join Date Time</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left w-2/12">Join Date Time</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -60,7 +64,7 @@
                         <td class="border border-gray-200 px-4 py-2 text-left">
                             <img src="images/countryflags/ph.gif" class="inline-block w-5" alt="Philippines">
                         </td>
-                        <td class="border border-gray-200 px-4 py-2 text-left">Wed, 19 Feb 2025<br>05:51:35 am</td>
+                        <td class="border border-gray-200 px-4 py-2 text-left">Wed, 19 Feb 2025 05:51:35 am</td>
                     </tr>
                     <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
                         <td class="border border-gray-200 px-4 py-2 text-left">2</td>
@@ -69,7 +73,7 @@
                         <td class="border border-gray-200 px-4 py-2 text-left">
                             <img src="images/countryflags/ng.gif" class="inline-block w-5" alt="Nigeria">
                         </td>
-                        <td class="border border-gray-200 px-4 py-2 text-left">Wed, 19 Feb 2025<br>05:03:11 pm</td>
+                        <td class="border border-gray-200 px-4 py-2 text-left">Wed, 19 Feb 2025 05:03:11 pm</td>
                     </tr>
                     <!-- Add more rows as needed -->
                     </tbody>
