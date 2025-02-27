@@ -21,6 +21,10 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
+Route::get('/authentication', function () {
+    return view('authentication');
+})->name('authentication');
+
 Route::get('/profile', function () {
     $user =
         (object)[
