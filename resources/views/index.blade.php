@@ -46,6 +46,13 @@
             animation: slideDown 0.3s ease-out;
         }
 
+        /* Prevent scrolling when menu is open */
+        body.menu-open {
+            overflow: hidden;
+            height: 100%; /* Optional, prevents height shifts */
+        }
+
+
         @keyframes slideDown {
             from {
                 opacity: 0;
@@ -103,16 +110,6 @@
         <a href="{{ route('login') }}" class="bg-yume hover:bg-yume-contrast text-white font-semibold py-3 px-6 rounded-full transition">Sign In</a>
     </nav>
 </header>
-
-<!-- Include this simple script to toggle mobile menu visibility -->
-<script>
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-</script>
 
 <section class="relative bg-black text-white">
     <div class="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
@@ -623,7 +620,8 @@
     const mobileMenu = document.getElementById('mobile-menu');
 
     mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('show');
+        mobileMenu.classList.toggle('hidden');
+        document.body.classList.toggle('menu-open');  // Disable or enable scrolling
     });
 </script>
 </body>

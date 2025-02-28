@@ -40,6 +40,12 @@
             cursor: pointer;
         }
 
+        /* Prevent scrolling when menu is open */
+        body.menu-open {
+            overflow: hidden;
+            height: 100%; /* Optional, prevents height shifts */
+        }
+
         /* Mobile Menu Animation */
         #mobile-menu.show {
             display: flex;
@@ -285,7 +291,8 @@
     });
 
     mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('show');
+        mobileMenu.classList.toggle('hidden');
+        document.body.classList.toggle('menu-open');  // Disable or enable scrolling
     });
 </script>
 </body>
