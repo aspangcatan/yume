@@ -326,17 +326,19 @@
             </div>
         </div>
 
-
         <!-- Call to Action Button -->
-        <div class="flex justify-center mt-16">
-            <button
-                class="px-16 py-6 text-3xl font-extrabold text-white rounded-full shadow-2xl    bg-yume
+        <div class="text-center mt-12">
+            <button onclick="window.open('https://www.yume.global/Gcell18','_self')"
+                    class="px-12 py-4 text-xl font-extrabold text-white rounded-full shadow-2xl
+               bg-yume
                transform hover:scale-105 focus:scale-105 transition-transform duration-300 ease-out
-               shadow-pink-400/50 tracking-wide">
+               shadow-pink-400/50 tracking-wide
+
+               md:px-16 md:py-6 md:text-3xl
+               ">
                 Get Published for FREE
             </button>
         </div>
-
     </div>
 </section>
 <section id="feature-sections" class="bg-[#162e60] py-16">
@@ -431,13 +433,17 @@
         <!-- Call to Action Button with space below -->
         <div class="text-center mt-12">
             <button onclick="window.open('https://www.yume.global/Gcell18','_self')"
-                class="px-16 py-6 text-3xl font-extrabold text-white rounded-full shadow-2xl
+                    class="px-12 py-4 text-xl font-extrabold text-white rounded-full shadow-2xl
                bg-yume-contrast
                transform hover:scale-105 focus:scale-105 transition-transform duration-300 ease-out
-               shadow-pink-400/50 tracking-wide">
+               shadow-pink-400/50 tracking-wide
+
+               md:px-16 md:py-6 md:text-3xl
+               ">
                 Create an Account
             </button>
         </div>
+
     </div>
 </section>
 <section id="feature-sections" class="bg-white py-16">
