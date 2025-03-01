@@ -78,8 +78,8 @@
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center space-x-6">
             <a href="{{ route('index') }}" class="text-white hover:text-yume font-medium transition">Home</a>
-            <a href="publishing.php" class="text-white hover:text-yume font-medium transition">Publishing</a>
-            <a href="plan.php" class="text-white hover:text-yume font-medium transition">Affiliate</a>
+            <a href="{{ route('publishing') }}" class="text-white hover:text-yume font-medium transition">Publishing</a>
+            <a href="{{ route('affiliate') }}" class="text-white hover:text-yume font-medium transition">Affiliate</a>
             <a href="rewards.php" class="text-white hover:text-yume font-medium transition">Rewards</a>
             <a href="{{ route('faq') }}" class="text-white hover:text-yume font-medium transition">FAQ</a>
 
@@ -103,8 +103,8 @@
     <!-- Fullscreen Mobile Menu (Hidden by default) -->
     <nav id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden flex flex-col items-center justify-center space-y-6 z-40">
         <a href="{{ route('index') }}" class="text-xl hover:text-yume font-medium">Home</a>
-        <a href="publishing.php" class="text-xl hover:text-yume font-medium">Publishing</a>
-        <a href="plan.php" class="text-xl hover:text-yume font-medium">Affiliate</a>
+        <a href="{{ route('publishing') }}" class="text-xl hover:text-yume font-medium">Publishing</a>
+        <a href="{{ route('affiliate') }}" class="text-xl hover:text-yume font-medium">Affiliate</a>
         <a href="rewards.php" class="text-xl hover:text-yume font-medium">Rewards</a>
         <a href="{{ route('faq') }}" class="text-xl hover:text-yume font-medium">FAQ</a>
         <a href="{{ route('login') }}" class="bg-yume hover:bg-yume-contrast text-white font-semibold py-3 px-6 rounded-full transition">Sign In</a>
