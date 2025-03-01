@@ -19,6 +19,14 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
+Route::get('/publishing', function () {
+    return view('publishing');
+})->name('publishing');
+
+Route::get('/affiliate', function () {
+    return view('affiliate');
+})->name('affiliate');
+
 Route::get('/login', function () {
     return view('login');
 })->name('login');
