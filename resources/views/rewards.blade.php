@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YUME Streaming - Discover & Earn</title>
+    <title>YUME</title>
+    <link rel="icon" href="{{ asset('img/yume-logo.png') }}" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Hide scrollbar for the carousel */
@@ -63,18 +64,25 @@
                 transform: translateY(0);
             }
         }
+
+        #main-header {
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+        }
+
+        #main-header.scrolled {
+            background-color: #0D0D0D; /* Adjust to match your desired color */
+        }
     </style>
 </head>
 <body class="bg-gray-100">
-
-<header class="absolute top-0 left-0 w-full z-50">
+<header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
     <div class="container mx-auto flex items-center justify-between py-4 px-6">
         <!-- Logo -->
         <a href="{{ route('index') }}" class="flex items-center space-x-3">
             <img src="{{ asset('img/yumeglobal-logo.png') }}" alt="YUME" class="h-10">
         </a>
 
-        <!-- Desktop Navigation -->
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center space-x-6">
             <a href="{{ route('index') }}" class="text-white hover:text-yume font-medium transition">Home</a>
@@ -105,13 +113,12 @@
         <a href="{{ route('index') }}" class="text-xl hover:text-yume font-medium">Home</a>
         <a href="{{ route('publishing') }}" class="text-xl hover:text-yume font-medium">Publishing</a>
         <a href="{{ route('affiliate') }}" class="text-xl hover:text-yume font-medium">Affiliate</a>
-        <a href="{{ route('rewards') }}" class="text-xl hover:text-yume font-medium">Rewards</a>
+        <a href="rewards.php" class="text-xl hover:text-yume font-medium">Rewards</a>
         <a href="{{ route('faq') }}" class="text-xl hover:text-yume font-medium">FAQ</a>
         <a href="{{ route('login') }}" class="bg-yume hover:bg-yume-contrast text-white font-semibold py-3 px-6 rounded-full transition">Sign In</a>
     </nav>
 </header>
-
-<section class="relative bg-black text-white">
+<section id="hero" class="relative bg-black text-white">
     <div class="relative w-full h-[100vh] flex items-center justify-center overflow-hidden">
         <!-- Background Image with Offset -->
         <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -126,9 +133,9 @@
             <h2 class="text-3xl font-bold leading-tight">Rewards</h2>
             <div class="w-16 h-1 bg-gray-800 mx-auto my-4"></div>
         </div>
-        
+
         <p class="text-gray-700 text-lg mb-4">With YUME, every stream and share brings you closer to curated rewards tailored to your unique tastes. Whether it's exclusive access to concerts, limited edition merchandise, or VIP experiences, our rewards system is designed to elevate your music journey like never before.</p>
-        
+
     </div>
 </section>
 
@@ -204,11 +211,25 @@
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
+    function toggleNavbarBackground() {
+        const header = document.getElementById('main-header');
+        const hero = document.getElementById('hero');
+
+        const heroBottom = hero.offsetTop + hero.offsetHeight;
+        if (window.scrollY > heroBottom - 60) { // 60px buffer to catch right at transition
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+
+    window.addEventListener('scroll', toggleNavbarBackground);
+
     mobileMenuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
         document.body.classList.toggle('menu-open');  // Disable or enable scrolling
     });
-    
+
 </script>
 
 </body>
