@@ -108,13 +108,15 @@
     </div>
 
     <!-- Fullscreen Mobile Menu (Hidden by default) -->
-    <nav id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden flex flex-col items-center justify-center space-y-6 z-40">
+    <nav id="mobile-menu"
+         class="fixed inset-0 bg-black bg-opacity-90 text-white hidden flex flex-col items-center justify-center space-y-6 z-40">
         <a href="{{ route('index') }}" class="text-xl hover:text-yume font-medium">Home</a>
         <a href="{{ route('publishing') }}" class="text-xl hover:text-yume font-medium">Publishing</a>
         <a href="{{ route('affiliate') }}" class="text-xl hover:text-yume font-medium">Affiliate</a>
         <a href="{{ route('rewards') }}" class="text-xl hover:text-yume font-medium">Rewards</a>
         <a href="{{ route('faq') }}" class="text-xl hover:text-yume font-medium">FAQ</a>
-        <a href="{{ route('login') }}" class="bg-yume hover:bg-yume-contrast text-white font-semibold py-3 px-6 rounded-full transition">Sign In</a>
+        <a href="{{ route('login') }}"
+           class="bg-yume hover:bg-yume-contrast text-white font-semibold py-3 px-6 rounded-full transition">Sign In</a>
     </nav>
 </header>
 <section id="hero" class="relative bg-black text-white">
@@ -163,8 +165,8 @@
                         for doing so. Listeners are rewarded for streaming music and sharing the experience with others,
                         completing the robust ecosystem where musicians and the community of music fans thrive.
 
-                        <br />
-                        <br />
+                        <br/>
+                        <br/>
                         YUME is a comprehensive music publishing and record label solution, combined with
                         a one-stop-shop platform designed to bring the artist’s narrative to a wider audience.
                     </p>
@@ -540,6 +542,620 @@
                             </p>
                         </li>
                     </ol>
+                </div>
+            </div>
+            {{--            --}}
+            <div class="bg-white rounded-lg overflow-hidden transition hover:shadow-lg">
+                <button
+                    class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="text-xl font-semibold text-gray-900 tracking-wide">
+                            What are the benefits of a Premium member?
+                        </span>
+                    <svg class="w-6 h-6 text-gray-500 transition-transform transform duration-300 ease-in-out"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-5 hidden">
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">
+                        As a Premium member, you are entitled to Four (4) income streams.
+                    </p>
+                    <ol class="list-decimal list-inside space-y-3 mt-3 ml-4">
+                        <li>
+                            <span class="font-semibold text-gray-900">Direct Referral Commission</span>
+                            <p class="text-gray-700 ml-4">
+                                You will earn a US$15.00 Direct Referral Commission for each person you successfully
+                                refer to the platform who becomes a Premium member by paying the US$100.00 affiliate
+                                sign-up fee.
+                            </p>
+                            <p class="text-gray-700 ml-4 mt-2">
+                                Additionally, if any of the people you enroll choose to enroll others, not only will
+                                they be rewarded with a Direct Referral Commission, but you will also receive additional
+                                Direct Referral Commissions up to 5 levels deep (depending on your qualified Rank).
+                            </p>
+                            <p class="text-gray-700 ml-4 mt-2">
+                                There is no limit to the number of Premium members you can personally enroll (your first
+                                level) or the number of people they can enroll personally (your second level), etc. This
+                                is why the Direct Referral Commission can become so significant over time.
+                            </p>
+                            <div class="overflow-x-auto bg-white rounded-lg shadow mt-3">
+                                <table class="w-full table-auto border-collapse border border-gray-200 text-center text-center">
+                                    <thead class="bg-gray-100">
+                                    <tr class="bg-gray-100 text-gray-700">
+                                        <th class="border border-gray-200 px-4 py-2">Level</th>
+                                        <th class="border border-gray-200 px-4 py-2">Unranked</th>
+                                        <th class="border border-gray-200 px-4 py-2">Silver</th>
+                                        <th class="border border-gray-200 px-4 py-2">Gold</th>
+                                        <th class="border border-gray-200 px-4 py-2">Diamond</th>
+                                        <th class="border border-gray-200 px-4 py-2">Platinum</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                        <td class="border border-gray-200 px-4 py-2">1</td>
+                                        <td class="border border-gray-200 px-4 py-2">15%</td>
+                                        <td class="border border-gray-200 px-4 py-2">15%</td>
+                                        <td class="border border-gray-200 px-4 py-2">15%</td>
+                                        <td class="border border-gray-200 px-4 py-2">15%</td>
+                                        <td class="border border-gray-200 px-4 py-2">15%</td>
+                                    </tr>
+                                    <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                        <td class="border border-gray-200 px-4 py-2">2</td>
+                                        <td class="border border-gray-200 px-4 py-2"></td>
+                                        <td class="border border-gray-200 px-4 py-2">5%</td>
+                                        <td class="border border-gray-200 px-4 py-2">5%</td>
+                                        <td class="border border-gray-200 px-4 py-2">5%</td>
+                                        <td class="border border-gray-200 px-4 py-2">5%</td>
+                                    </tr>
+                                    <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                        <td class="border border-gray-200 px-4 py-2">3</td>
+                                        <td class="border border-gray-200 px-4 py-2"></td>
+                                        <td class="border border-gray-200 px-4 py-2"></td>
+                                        <td class="border border-gray-200 px-4 py-2">5%</td>
+                                        <td class="border border-gray-200 px-4 py-2">5%</td>
+                                        <td class="border border-gray-200 px-4 py-2">5%</td>
+                                    </tr>
+                                    <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                        <td class="border border-gray-200 px-4 py-2">4</td>
+                                        <td class="border border-gray-200 px-4 py-2"></td>
+                                        <td class="border border-gray-200 px-4 py-2"></td>
+                                        <td class="border border-gray-200 px-4 py-2"></td>
+                                        <td class="border border-gray-200 px-4 py-2">3%</td>
+                                        <td class="border border-gray-200 px-4 py-2">3%</td>
+                                    </tr>
+                                    <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                        <td class="border border-gray-200 px-4 py-2">5</td>
+                                        <td class="border border-gray-200 px-4 py-2"></td>
+                                        <td class="border border-gray-200 px-4 py-2"></td>
+                                        <td class="border border-gray-200 px-4 py-2"></td>
+                                        <td class="border border-gray-200 px-4 py-2"></td>
+                                        <td class="border border-gray-200 px-4 py-2">2%</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="font-semibold text-gray-900">Binary Commission</span>
+                            <p class="text-gray-700 ml-4">
+                                To start earning the Binary Reward, you must personally enroll at least two (2) new
+                                Premium members in your team. Your uplines (or anyone else in the placement tree) may
+                                also place Premium members in your placement tree.
+                            </p>
+                            <p class="text-gray-700 ml-4 mt-2">
+                                The Binary Commission is dependent on the number of Premium Members you have in your
+                                Left Team and Right Team. Every 1 Premium member in the Left Team and the Right Team
+                                constitutes a Pair. For every Pair, you earn $3.00 and the number of Pairs you are
+                                entitled to in a week will depend on your Ranking.
+                            </p>
+                            <p class="text-gray-700 ml-4 mt-2">
+                                Your Ranking is dependent on the number of directly recruited Premium Members that you
+                                have. Spilled-over affiliates from your uplines do not contribute toward your Ranking.
+                            </p>
+
+                            <div class="overflow-x-auto bg-white rounded-lg shadow mt-3">
+                                <table class="w-full table-auto border-collapse border border-gray-200 text-center">
+                                    <thead class="bg-gray-100">
+                                    <tr class="bg-gray-100 text-gray-700">
+                                        <th class="border border-gray-200 px-4 py-2">Rank</th>
+                                        <th class="border border-gray-200 px-4 py-2">Silver</th>
+                                        <th class="border border-gray-200 px-4 py-2">Gold</th>
+                                        <th class="border border-gray-200 px-4 py-2">Diamond</th>
+                                        <th class="border border-gray-200 px-4 py-2">Platinum</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                        <td class="border border-gray-200 px-4 py-2">Number of Active Direct
+                                            Recruits
+                                        </td>
+                                        <td class="border border-gray-200 px-4 py-2">5</td>
+                                        <td class="border border-gray-200 px-4 py-2">10</td>
+                                        <td class="border border-gray-200 px-4 py-2">15</td>
+                                        <td class="border border-gray-200 px-4 py-2">20</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="overflow-x-auto bg-white rounded-lg shadow mt-3">
+                                <table class="w-full table-auto border-collapse border border-gray-200 text-center">
+                                    <thead class="bg-gray-100">
+                                    <tr class="bg-gray-100 text-gray-700">
+                                        <th class="border border-gray-200 px-4 py-2">Rank</th>
+                                        <th class="border border-gray-200 px-4 py-2">Unranked</th>
+                                        <th class="border border-gray-200 px-4 py-2">Silver</th>
+                                        <th class="border border-gray-200 px-4 py-2">Gold</th>
+                                        <th class="border border-gray-200 px-4 py-2">Diamond</th>
+                                        <th class="border border-gray-200 px-4 py-2">Platinum</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                        <td class="border border-gray-200 px-4 py-2">Weekly Max Pairs</td>
+                                        <td class="border border-gray-200 px-4 py-2">30</td>
+                                        <td class="border border-gray-200 px-4 py-2">100</td>
+                                        <td class="border border-gray-200 px-4 py-2">200</td>
+                                        <td class="border border-gray-200 px-4 py-2">300</td>
+                                        <td class="border border-gray-200 px-4 py-2">500</td>
+                                    </tr>
+                                    <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                        <td class="border border-gray-200 px-4 py-2">Weekly Max Commission
+                                        </td>
+                                        <td class="border border-gray-200 px-4 py-2">US$90</td>
+                                        <td class="border border-gray-200 px-4 py-2">US$300</td>
+                                        <td class="border border-gray-200 px-4 py-2">US$600</td>
+                                        <td class="border border-gray-200 px-4 py-2">US$900</td>
+                                        <td class="border border-gray-200 px-4 py-2">US$1,500</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="font-semibold text-gray-900">Mega Matching Bonus</span>
+                            <p class="text-gray-700 ml-4">
+                                While the Direct Referral Commissions and Binary Commissions are substantial, our Mega
+                                Matching Bonuses are even more generous!
+                            </p>
+                            <p class="text-gray-700 ml-4 mt-3">
+                                There are 2 types of Mega Matching Bonus
+                            </p>
+                            <ol class="list-decimal list-inside space-y-3 mt-3 ml-4">
+                                <li>
+                                    <span class="text-gray-700">
+                                        You match 50% of the Binary Commission earned by everyone you directly enroll.
+                                        Additionally, a percentage of everyone your direct recruits enroll FOUR (4)
+                                        ENROLLMENT LEVELS DEEP, regardless of where they fall in your binary!
+                                    </span>
+
+                                    <div class="overflow-x-auto bg-white rounded-lg shadow mt-3">
+                                        <table class="w-full table-auto border-collapse border border-gray-200 text-center">
+                                            <thead class="bg-gray-100">
+                                            <tr class="bg-gray-100 text-gray-700">
+                                                <th class="border border-gray-200 px-4 py-2">Level/Rank</th>
+                                                <th class="border border-gray-200 px-4 py-2">Silver</th>
+                                                <th class="border border-gray-200 px-4 py-2">Gold</th>
+                                                <th class="border border-gray-200 px-4 py-2">Diamond</th>
+                                                <th class="border border-gray-200 px-4 py-2">Platinum</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                                <td class="border border-gray-200 px-4 py-2">1</td>
+                                                <td class="border border-gray-200 px-4 py-2">50%</td>
+                                                <td class="border border-gray-200 px-4 py-2">50%</td>
+                                                <td class="border border-gray-200 px-4 py-2">50%</td>
+                                                <td class="border border-gray-200 px-4 py-2">50%</td>
+                                            </tr>
+                                            <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                                <td class="border border-gray-200 px-4 py-2">2</td>
+                                                <td class="border border-gray-200 px-4 py-2"></td>
+                                                <td class="border border-gray-200 px-4 py-2">10%</td>
+                                                <td class="border border-gray-200 px-4 py-2">10%</td>
+                                                <td class="border border-gray-200 px-4 py-2">10%</td>
+                                            </tr>
+                                            <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                                <td class="border border-gray-200 px-4 py-2">3</td>
+                                                <td class="border border-gray-200 px-4 py-2"></td>
+                                                <td class="border border-gray-200 px-4 py-2"></td>
+                                                <td class="border border-gray-200 px-4 py-2">5%</td>
+                                                <td class="border border-gray-200 px-4 py-2">5%</td>
+                                            </tr>
+                                            <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                                <td class="border border-gray-200 px-4 py-2">4</td>
+                                                <td class="border border-gray-200 px-4 py-2"></td>
+                                                <td class="border border-gray-200 px-4 py-2"></td>
+                                                <td class="border border-gray-200 px-4 py-2"></td>
+                                                <td class="border border-gray-200 px-4 py-2">5%</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="text-gray-700">
+                                       Platinum members earn an additional 5% Mega Matching Bonus on the Streaming Income earned by everyone they directly enroll.
+                                    </span>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <span class="font-semibold text-gray-900">Streaming Income</span>
+                            <p class="text-gray-700 ml-4">
+                                As a Premium member, you earn Streaming Points when you stream music and videos daily.
+                                The Streaming Points you can earn on each streaming are dependent on your rank. The
+                                number of Streaming Points you can earn in a day depends on the time you spend
+                                streaming.
+                            </p>
+                            <p class="text-gray-700 ml-4 mt-3">
+                                As a Premium member, you earn Streaming Points when you stream music and videos daily.
+                                The Streaming Points you can earn on each streaming are dependent on your rank. The
+                                number of Streaming Points you can earn in a day depends on the time you spend
+                                streaming.
+
+                                The value of each Streaming Point is determined by the allocated revenue of Yume for
+                                that month divided by the overall number of Streaming Points for the same month.
+                            </p>
+                            <div class="overflow-x-auto bg-white rounded-lg shadow mt-3">
+                                <table class="w-full table-auto border-collapse border border-gray-200 text-center text-center">
+                                    <thead class="bg-gray-100">
+                                    <tr class="bg-gray-100 text-gray-700">
+                                        <th class="border border-gray-200 px-4 py-2">Rank</th>
+                                        <th class="border border-gray-200 px-4 py-2">Streaming Points per task</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                        <td class="border border-gray-200 px-4 py-2">Unrank</td>
+                                        <td class="border border-gray-200 px-4 py-2">0.50</td>
+                                    </tr>
+                                    <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                        <td class="border border-gray-200 px-4 py-2">Silver</td>
+                                        <td class="border border-gray-200 px-4 py-2">0.80</td>
+                                    </tr>
+                                    <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                        <td class="border border-gray-200 px-4 py-2">Gold</td>
+                                        <td class="border border-gray-200 px-4 py-2">1.00</td>
+                                    </tr>
+                                    <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                        <td class="border border-gray-200 px-4 py-2">Diamond</td>
+                                        <td class="border border-gray-200 px-4 py-2">1.50</td>
+                                    </tr>
+                                    <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                        <td class="border border-gray-200 px-4 py-2">Platinum</td>
+                                        <td class="border border-gray-200 px-4 py-2">2.00</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            {{--            --}}
+            <div class="bg-white rounded-lg overflow-hidden transition hover:shadow-lg">
+                <button
+                    class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="text-xl font-semibold text-gray-900 tracking-wide">
+                            Membership paid via Credit Card
+                        </span>
+                    <svg class="w-6 h-6 text-gray-500 transition-transform transform duration-300 ease-in-out"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-5 hidden">
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">
+                        When a member pays for their membership using a credit card, their membership will be placed on
+                        "HOLD" for a period of two weeks. During this time, no commissions will be paid to the uplines
+                        associated with their membership, and all commissions earned will be held in escrow within the
+                        Escrow Wallet.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg mt-3 mt-3">
+                        After the two-week period, on the third Sunday, the "HOLD" status expires, and commissions are
+                        tabulated for the membership. Additionally, all escrowed earnings are released to the member's
+                        e-wallet.
+                    </p>
+                </div>
+            </div>
+            {{--            --}}
+            <div class="bg-white rounded-lg overflow-hidden transition hover:shadow-lg">
+                <button
+                    class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="text-xl font-semibold text-gray-900 tracking-wide">
+                            How to create an e-Code?
+                        </span>
+                    <svg class="w-6 h-6 text-gray-500 transition-transform transform duration-300 ease-in-out"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-5 hidden">
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">
+                        The value of each e-Code is US$120. To create an e-Code, you can use the balances from either
+                        the E-wallet or the Cash Wallet.
+                    </p>
+                </div>
+            </div>
+            {{--            --}}
+            <div class="bg-white rounded-lg overflow-hidden transition hover:shadow-lg">
+                <button
+                    class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="text-xl font-semibold text-gray-900 tracking-wide">
+                            What is Cash wallet?
+                        </span>
+                    <svg class="w-6 h-6 text-gray-500 transition-transform transform duration-300 ease-in-out"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-5 hidden">
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">
+                        The Cash Wallet is required when you want to create an e-Code or Upgrade. The minimum top-up
+                        value is US$10. Currently, you can Top-Up through credit cards, wallets, and cryptocurrency. For
+                        credit card top-up, the maximum amount is US$50. For cryptocurrency, you can only top up with
+                        USDT (TRC-20) and BUSD (BEP20) and tabulate based on the company’s “buy” rate.
+                    </p>
+                </div>
+            </div>
+            {{--            --}}
+            <div class="bg-white rounded-lg overflow-hidden transition hover:shadow-lg">
+                <button
+                    class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="text-xl font-semibold text-gray-900 tracking-wide">
+                            What are Streaming Points and how can I earn them?
+                        </span>
+                    <svg class="w-6 h-6 text-gray-500 transition-transform transform duration-300 ease-in-out"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-5 hidden">
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">
+                        Streaming Points are earned every time you stream music on our platform. These points can then
+                        be converted into cash earnings
+                    </p>
+                </div>
+            </div>
+            {{--            --}}
+            <div class="bg-white rounded-lg overflow-hidden transition hover:shadow-lg">
+                <button
+                    class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="text-xl font-semibold text-gray-900 tracking-wide">
+                            How does the conversion of Streaming Points work?
+                        </span>
+                    <svg class="w-6 h-6 text-gray-500 transition-transform transform duration-300 ease-in-out"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-5 hidden">
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">
+                        The Company allocates 25% of the publishing income as the pool to be shared by all Streaming
+                        Points. The value per Streaming Point varies each month depending on the monthly company’s
+                        publishing revenue.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg mt-3">
+                        Streaming Income is tabulated at the end of each period and paid out within 7 days.
+                    </p>
+                </div>
+            </div>
+            {{--            --}}
+            <div class="bg-white rounded-lg overflow-hidden transition hover:shadow-lg">
+                <button
+                    class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="text-xl font-semibold text-gray-900 tracking-wide">
+                            What are Reward points and how can I earn them?
+                        </span>
+                    <svg class="w-6 h-6 text-gray-500 transition-transform transform duration-300 ease-in-out"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-5 hidden">
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">
+                        Reward points are earned based on 10% of your affiliate commission. These points can be redeemed
+                        for various rewards such as gifts, raffle entries, or concert tickets. The percentage of reward
+                        points available for redemption varies based on your Redemption Entitlement Level (REL).
+                    </p>
+                </div>
+            </div>
+            {{--            --}}
+            <div class="bg-white rounded-lg overflow-hidden transition hover:shadow-lg">
+                <button
+                    class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="text-xl font-semibold text-gray-900 tracking-wide">
+                            Reward Entitlement Level (REL)
+                        </span>
+                    <svg class="w-6 h-6 text-gray-500 transition-transform transform duration-300 ease-in-out"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-5 hidden">
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">
+                        The Reward Entitlement Level (REL) is a measure determined by the number of accumulated Platinum
+                        members within your team. As you gather more Platinum members in your team, your Reward
+                        Entitlement Level rises, indicating your increasing success within the platform.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg mt-3">
+                        Your Reward Entitlement Level plays a crucial role in determining the percentage of reward
+                        points available for redemption. Essentially, the higher your Reward Entitlement Level, the
+                        greater the percentage of reward points you can utilize for various rewards, such as gifts,
+                        raffle entries, or concert tickets. This system incentivizes members to actively build and
+                        support their teams, fostering a collaborative environment where everyone benefits from
+                        collective success.
+                    </p>
+
+                    <div class="overflow-x-auto bg-white rounded-lg shadow mt-3">
+                        <table class="w-full table-auto border-collapse border border-gray-200 text-center text-center">
+                            <thead class="bg-gray-100">
+                            <tr class="bg-gray-100 text-gray-700">
+                                <th class="border border-gray-200 px-4 py-2">Status</th>
+                                <th class="border border-gray-200 px-4 py-2">2 Stars Platinum</th>
+                                <th class="border border-gray-200 px-4 py-2">3 Stars Platinum</th>
+                                <th class="border border-gray-200 px-4 py-2">4 Stars Platinum</th>
+                                <th class="border border-gray-200 px-4 py-2">Executive</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                <td class="border border-gray-200 px-4 py-2">Number of Accumulated Platinum</td>
+                                <td class="border border-gray-200 px-4 py-2">2</td>
+                                <td class="border border-gray-200 px-4 py-2">3</td>
+                                <td class="border border-gray-200 px-4 py-2">4</td>
+                                <td class="border border-gray-200 px-4 py-2">10</td>
+                            </tr>
+                            <tr class="border border-gray-300 text-gray-700 hover:bg-gray-50">
+                                <td class="border border-gray-200 px-4 py-2">Percentage of Reward Points available for
+                                    redemption
+                                </td>
+                                <td class="border border-gray-200 px-4 py-2">60%</td>
+                                <td class="border border-gray-200 px-4 py-2">70%</td>
+                                <td class="border border-gray-200 px-4 py-2">80%</td>
+                                <td class="border border-gray-200 px-4 py-2">100%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            {{--            --}}
+            <div class="bg-white rounded-lg overflow-hidden transition hover:shadow-lg">
+                <button
+                    class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="text-xl font-semibold text-gray-900 tracking-wide">
+                            How can I withdraw the earnings?
+                        </span>
+                    <svg class="w-6 h-6 text-gray-500 transition-transform transform duration-300 ease-in-out"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-5 hidden">
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">
+                        Earnings can be withdrawn at any time and multiple times per day, with a processing time of 24
+                        hours. The minimum withdrawal amount is US$100, and all payouts are through online banking or
+                        cryptocurrency. For cryptocurrency we payout in USDT (TRC-20) and BUSD(BEP20), based on the
+                        company's "Sell" rate.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg mt-3">
+                        An administrative fee of 3% with a minimum of US$1 and a 1.5 USDT/BUSD network fee (for
+                        cryptocurrency) will be charged per withdrawal. Payments are made directly to your bank account
+                        or USDT (TRC-20) or BUSD (BEP20) wallet, so it is important to have an updated and accurate bank
+                        account and crypto wallet address in the back office to avoid any loss.
+                    </p>
+                </div>
+            </div>
+            {{--            --}}
+            <div class="bg-white rounded-lg overflow-hidden transition hover:shadow-lg">
+                <button
+                    class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="text-xl font-semibold text-gray-900 tracking-wide">
+                            Why do I stop earning commission and streaming income?
+                        </span>
+                    <svg class="w-6 h-6 text-gray-500 transition-transform transform duration-300 ease-in-out"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-5 hidden">
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">
+                        The only reason is that you have gone Inactive. To continue earning commission and streaming
+                        income, you need to remain “Active” by paying the periodic platform fee of US$4.99. If you opt
+                        to pay yearly, you will enjoy a 30% discount.
+                    </p>
+                </div>
+            </div>
+            {{--            --}}
+            <div class="bg-white rounded-lg overflow-hidden transition hover:shadow-lg">
+                <button
+                    class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="text-xl font-semibold text-gray-900 tracking-wide">
+                            Forgot password?
+                        </span>
+                    <svg class="w-6 h-6 text-gray-500 transition-transform transform duration-300 ease-in-out"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-5 hidden">
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">
+                        To retrieve a forgotten password, click on the "Forgot Password" tab on the login page and a new
+                        password will be generated and sent to the email address used during registration. Note that
+                        support staff will not be able to assist with password retrieval due to encryption.
+                    </p>
+                </div>
+            </div>
+            {{--            --}}
+            <div class="bg-white rounded-lg overflow-hidden transition hover:shadow-lg">
+                <button
+                    class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="text-xl font-semibold text-gray-900 tracking-wide">
+                            Can I edit Profile?
+                        </span>
+                    <svg class="w-6 h-6 text-gray-500 transition-transform transform duration-300 ease-in-out"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-5 hidden">
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">
+                        Yes, you can. The administrator will NOT be responsible for the integrity and security of your
+                        back office if it is compromised due to your negligence. Any financial loss will be self-borne.
+                    </p>
+                </div>
+            </div>
+            {{--            --}}
+            <div class="bg-white rounded-lg overflow-hidden transition hover:shadow-lg">
+                <button
+                    class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="text-xl font-semibold text-gray-900 tracking-wide">
+                            Where is the Company located?
+                        </span>
+                    <svg class="w-6 h-6 text-gray-500 transition-transform transform duration-300 ease-in-out"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-5 hidden">
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">
+                        The Company is in Las Vegas, Nevada, USA. For all support issues, you can write to
+                        customercare@yume.global
+                    </p>
+                </div>
+            </div>
+            {{--            --}}
+            <div class="bg-white rounded-lg overflow-hidden transition hover:shadow-lg">
+                <button
+                    class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="text-xl font-semibold text-gray-900 tracking-wide">
+                            What time zone in the system and platform based in?
+                        </span>
+                    <svg class="w-6 h-6 text-gray-500 transition-transform transform duration-300 ease-in-out"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-5 hidden">
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">
+                        The system and platform’s time zone is Pacific Standard Time (PST) (GMT -8).
+                    </p>
                 </div>
             </div>
         </div>
