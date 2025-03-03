@@ -114,7 +114,7 @@
         <a href="{{ route('index') }}" class="text-xl hover:text-yume font-medium">Home</a>
         <a href="{{ route('publishing') }}" class="text-xl hover:text-yume font-medium">Publishing</a>
         <a href="{{ route('affiliate') }}" class="text-xl hover:text-yume font-medium">Affiliate</a>
-        <a href="rewards.php" class="text-xl hover:text-yume font-medium">Rewards</a>
+        <a href="{{ route('rewards') }}" class="text-xl hover:text-yume font-medium">Rewards</a>
         <a href="{{ route('faq') }}" class="text-xl hover:text-yume font-medium">FAQ</a>
         <a href="{{ route('login') }}" class="bg-yume hover:bg-yume-contrast text-white font-semibold py-3 px-6 rounded-full transition">Sign In</a>
     </nav>
