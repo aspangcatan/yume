@@ -80,7 +80,7 @@
             <a href="{{ route('index') }}" class="text-white hover:text-yume font-medium transition">Home</a>
             <a href="{{ route('publishing') }}" class="text-white hover:text-yume font-medium transition">Publishing</a>
             <a href="{{ route('affiliate') }}" class="text-white hover:text-yume font-medium transition">Affiliate</a>
-            <a href="rewards.php" class="text-white hover:text-yume font-medium transition">Rewards</a>
+            <a href="{{ route('rewards') }}" class="text-white hover:text-yume font-medium transition">Rewards</a>
             <a href="{{ route('faq') }}" class="text-white hover:text-yume font-medium transition">FAQ</a>
 
             <!-- Wrapping Sign In button in a flex container to align properly -->
@@ -105,7 +105,7 @@
         <a href="{{ route('index') }}" class="text-xl hover:text-yume font-medium">Home</a>
         <a href="{{ route('publishing') }}" class="text-xl hover:text-yume font-medium">Publishing</a>
         <a href="{{ route('affiliate') }}" class="text-xl hover:text-yume font-medium">Affiliate</a>
-        <a href="rewards.php" class="text-xl hover:text-yume font-medium">Rewards</a>
+        <a href="{{ route('rewards') }}" class="text-xl hover:text-yume font-medium">Rewards</a>
         <a href="{{ route('faq') }}" class="text-xl hover:text-yume font-medium">FAQ</a>
         <a href="{{ route('login') }}" class="bg-yume hover:bg-yume-contrast text-white font-semibold py-3 px-6 rounded-full transition">Sign In</a>
     </nav>
@@ -204,7 +204,7 @@
 </section>
 
 <section class="bg-gray-100 flex items-center justify-center min-h-screen px-6">
-        <<div class="max-w-3xl bg-white shadow-lg rounded-lg p-8 my-10">
+        <div class="max-w-3xl bg-white shadow-lg rounded-lg p-8 my-10">
             <h2 class="text-center text-xl font-bold uppercase tracking-wider mb-4">
                 Embark on a Musical Odyssey!
             </h2>
