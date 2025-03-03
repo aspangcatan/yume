@@ -27,6 +27,10 @@ Route::get('/affiliate', function () {
     return view('affiliate');
 })->name('affiliate');
 
+Route::get('/rewards', function () {
+    return view('rewards');
+})->name('rewards');
+
 Route::get('/login', function () {
     return view('login');
 })->name('login');
