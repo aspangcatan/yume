@@ -41,10 +41,10 @@
             <nav>
                 <ul class="flex space-x-6 uppercase text-sm">
                     <li><a href="{{ route('index') }}" class="hover:text-orange-400">Home</a></li>
-                    <li><a href="#" class="hover:text-orange-400">Publishing</a></li>
-                    <li><a href="#" class="hover:text-orange-400">Affiliate</a></li>
-                    <li><a href="#" class="hover:text-orange-400">Rewards</a></li>
-                    <li><a href="#" class="hover:text-orange-400">FAQ</a></li>
+                    <li><a href="{{ route('publishing') }}" class="hover:text-orange-400">Publishing</a></li>
+                    <li><a href="{{ route('affiliate') }}" class="hover:text-orange-400">Affiliate</a></li>
+                    <li><a href="{{ route('rewards') }}" class="hover:text-orange-400">Rewards</a></li>
+                    <li><a href="{{ route('faq') }}" class="hover:text-orange-400">FAQ</a></li>
                     <li><a href="{{ route('login') }}" class="hover:text-orange-400">Sign In</a></li>
                 </ul>
             </nav>

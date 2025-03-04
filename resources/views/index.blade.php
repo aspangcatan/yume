@@ -95,7 +95,7 @@
 
             <!-- Wrapping Sign In button in a flex container to align properly -->
             <div class="flex items-center">
-                <a href="{{ route('index') }}"
+                <a href="{{ route('login') }}"
                    class="bg-yume hover:bg-yume-contrast text-white font-semibold py-2 px-6 rounded-full transition shadow-md">
                     Sign In
                 </a>
