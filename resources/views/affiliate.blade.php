@@ -53,6 +53,13 @@
             height: 100%; /* Optional, prevents height shifts */
         }
 
+        @media (max-width: 768px) {
+            .tab-container {
+                flex-direction: column;
+            }
+        }
+
+
 
         @keyframes slideDown {
             from {
@@ -118,13 +125,15 @@
         <a href="{{ route('faq') }}" class="text-xl hover:text-yume font-medium">FAQ</a>
         <a href="{{ route('login') }}" class="bg-yume hover:bg-yume-contrast text-white font-semibold py-3 px-6 rounded-full transition">Sign In</a>
     </nav>
+    
 </header>
 
-<section id="hero" class="relative bg-black text-white">
-    <div class="relative w-full h-[100vh] flex items-center justify-center overflow-hidden">
+<section class="relative bg-black text-white">
+    <div class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
         <!-- Background Image with Offset -->
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style="background-image: url('{{ asset('img/03-Affiliate.jpg') }}'); background-position: center top 70px;">
+        <div class="absolute inset-0 w-full h-full">
+            <img src="{{ asset('img/03-Affiliate.jpg') }}" alt="Background"
+                class="w-full h-full object-cover object-top">
         </div>
     </div>
 </section>
@@ -179,7 +188,7 @@
 
     <div class="max-w-4xl mx-auto bg-white p-5 rounded-lg shadow-lg">
         <!-- Tabs -->
-        <div class="flex border-b">
+        <div class="tab-container flex flex-wrap border-b">
             <button class="tab-button px-5 py-3 text-gray-600 font-semibold hover:text-orange-500 border-b-2 border-transparent focus:border-orange-500 active"
                 data-tab="ranking">Ranking</button>
             <button class="tab-button px-5 py-3 text-gray-600 font-semibold hover:text-orange-500 border-b-2 border-transparent focus:border-orange-500"
@@ -195,32 +204,37 @@
         <!-- Tab Content -->
         <div class="tab-content mt-5" id="ranking">
             <h2 class="text-xl font-bold flex items-center gap-2">
-            <img src="{{ asset('img/icon1.png') }}" alt="Ranking Icon" class="w-6 h-6">
+                <img src="{{ asset('img/icon1.png') }}" alt="Ranking Icon" class="w-6 h-6"> 
                 RANKING
             </h2>
             <p class="mt-2 text-gray-600">In YUME, ranks signify achievement levels within the affiliate program and factor into commission calculations.</p>
             <p class="mt-2 text-gray-600">These ranks are determined by the number of Active Direct Recruited Premium members who've paid their periodic platform subscription fees. The ranking is updated weekly following the FIRST periodic cut-off.</p>
-            <table class="w-full mt-4 border">
-                <thead>
-                    <tr class="bg-gray-200">
-                        <th class="p-3 border">Rank</th>
-                        <th class="p-3 border">Silver</th>
-                        <th class="p-3 border">Gold</th>
-                        <th class="p-3 border">Diamond</th>
-                        <th class="p-3 border">Platinum</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="text-center">
-                        <td class="p-3 border">Number of Active Direct Recruits</td>
-                        <td class="p-3 border">5</td>
-                        <td class="p-3 border">10</td>
-                        <td class="p-3 border">15</td>
-                        <td class="p-3 border">20</td>
-                    </tr>
-                </tbody>
-            </table>
+            
+            <!-- Make the table scrollable -->
+            <div class="overflow-x-auto">
+                <table class="w-full mt-4 border min-w-[600px]">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="p-3 border">Rank</th>
+                            <th class="p-3 border">Silver</th>
+                            <th class="p-3 border">Gold</th>
+                            <th class="p-3 border">Diamond</th>
+                            <th class="p-3 border">Platinum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-center">
+                            <td class="p-3 border">Number of Active Direct Recruits</td>
+                            <td class="p-3 border">5</td>
+                            <td class="p-3 border">10</td>
+                            <td class="p-3 border">15</td>
+                            <td class="p-3 border">20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
 
 
         <div class="tab-content mt-5 hidden" id="referral">

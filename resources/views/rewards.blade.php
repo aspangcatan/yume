@@ -90,6 +90,7 @@
             <a href="{{ route('affiliate') }}" class="text-white hover:text-yume font-medium transition">Affiliate</a>
             <a href="{{ route('rewards') }}" class="text-white hover:text-yume font-medium transition">Rewards</a>
             <a href="{{ route('faq') }}" class="text-white hover:text-yume font-medium transition">FAQ</a>
+            
 
             <!-- Wrapping Sign In button in a flex container to align properly -->
             <div class="flex items-center">
@@ -118,11 +119,13 @@
         <a href="{{ route('login') }}" class="bg-yume hover:bg-yume-contrast text-white font-semibold py-3 px-6 rounded-full transition">Sign In</a>
     </nav>
 </header>
-<section id="hero" class="relative bg-black text-white">
-    <div class="relative w-full h-[100vh] flex items-center justify-center overflow-hidden">
+
+<section class="relative bg-black text-white">
+    <div class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
         <!-- Background Image with Offset -->
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style="background-image: url('{{ asset('img/04-Rewards.jpg') }}'); background-size: contain; background-position: center top 70px;">
+        <div class="absolute inset-0 w-full h-full">
+            <img src="{{ asset('img/04-Rewards.jpg') }}" alt="Background"
+                class="w-full h-full object-cover object-top">
         </div>
     </div>
 </section>
