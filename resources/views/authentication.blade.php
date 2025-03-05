@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
-    
+
 </head>
 <body class="flex items-center justify-center min-h-screen bg-gray-100">
 
@@ -28,7 +28,10 @@
             <input type="text" maxlength="1" class="w-12 h-12 text-xl text-center border rounded-md focus:ring-2 focus:ring-orange-400 outline-none" oninput="moveFocus(this, 6)">
         </div>
 
-        <button id="verifybtn" data-url="{{ route('powerline') }}" class="w-full mt-6 bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 transition">Verify</button>
+        <a href="{{ route('powerline') }}"
+           class="w-full mt-6 bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 transition text-center block cursor-pointer">
+            Verify
+        </a>
 
         <p class="text-gray-600 text-sm mt-4">
             Didn't receive the code? <a id="resendAuthBtn" href="#" class="text-orange-500 hover:underline">Resend</a>

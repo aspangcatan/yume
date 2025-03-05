@@ -19,9 +19,25 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
+Route::get('/publishing', function () {
+    return view('publishing');
+})->name('publishing');
+
+Route::get('/affiliate', function () {
+    return view('affiliate');
+})->name('affiliate');
+
+Route::get('/rewards', function () {
+    return view('rewards');
+})->name('rewards');
+
 Route::get('/login', function () {
     return view('login');
 })->name('login');
+
+Route::get('/faq', function () {
+    return view('faq');
+})->name('faq');
 
 Route::get('/authentication', function () {
     return view('authentication');
