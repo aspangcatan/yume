@@ -39,6 +39,10 @@ Route::get('/faq', function () {
     return view('faq');
 })->name('faq');
 
+Route::get('/register', function () {
+    return view('register');
+})->name('register');
+
 Route::get('/authentication', function () {
     return view('authentication');
 })->name('authentication');
