@@ -81,13 +81,14 @@
 
 <section class="relative bg-black text-white">
     <div class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background Image with Responsive Adjustments -->
         <div class="absolute inset-0 w-full h-full">
-            <img src="{{ asset('img/02-Publishing.jpg') }}" alt="Background"
-                class="w-full h-full object-cover sm:object-center md:object-top">
+        <img src="{{ asset('img/02-Publishing.jpg') }}" 
+            alt="Background"
+            class="w-full h-full object-contain sm:object-left md:object-center">
         </div>
     </div>
 </section>
+
 
 
 <section id="feature-sections" class="bg-white py-20">
