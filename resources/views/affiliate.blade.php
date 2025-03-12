@@ -90,8 +90,11 @@
     <div class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
         <!-- Background Image with Offset -->
         <div class="absolute inset-0 w-full h-full">
-            <img src="{{ asset('img/03-Affiliate.jpg') }}" alt="Background"
-                class="w-full h-full object-cover object-top">
+            <img src="{{ asset('img/03-Affiliate.jpg') }}" 
+            alt="Background"
+            class="w-full h-full object-contain sm:object-left md:object-center pt-20">
+          
+        </div>
         </div>
     </div>
 </section>
