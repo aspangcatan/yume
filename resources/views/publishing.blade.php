@@ -84,7 +84,7 @@
         <div class="absolute inset-0 w-full h-full">
         <img src="{{ asset('img/02-Publishing.jpg') }}" 
             alt="Background"
-            class="w-full h-full object-contain sm:object-left md:object-center">
+            class="w-full h-full object-contain sm:object-left md:object-center pt-20">
         </div>
     </div>
 </section>
