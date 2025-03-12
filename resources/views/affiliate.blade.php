@@ -146,7 +146,7 @@
 
     <div class="max-w-4xl mx-auto bg-white p-5 rounded-lg shadow-lg">
         <!-- Tabs -->
-        <div class="tab-container flex flex-wrap border-b">
+        <div class="tab-container flex flex-nowrap overflow-x-auto border-b">
             <button class="tab-button px-5 py-3 text-gray-600 font-semibold hover:text-orange-500 border-b-2 border-transparent focus:border-orange-500 active"
                 data-tab="ranking">Ranking</button>
             <button class="tab-button px-5 py-3 text-gray-600 font-semibold hover:text-orange-500 border-b-2 border-transparent focus:border-orange-500"

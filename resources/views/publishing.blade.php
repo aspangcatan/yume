@@ -81,13 +81,14 @@
 
 <section class="relative bg-black text-white">
     <div class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background Image with Offset -->
+        <!-- Background Image with Responsive Adjustments -->
         <div class="absolute inset-0 w-full h-full">
             <img src="{{ asset('img/02-Publishing.jpg') }}" alt="Background"
-                class="w-full h-full object-cover object-top">
+                class="w-full h-full object-cover sm:object-center md:object-top">
         </div>
     </div>
 </section>
+
 
 <section id="feature-sections" class="bg-white py-20">
     <div class="container mx-auto px-12">
@@ -194,9 +195,51 @@
                 <input type="email" class="w-full p-3 border border-gray-300 rounded-md focus:ring focus:ring-gray-400" placeholder="Email Address*" required>
 
                 <div class="flex items-center border border-gray-300 rounded-md p-3">
-                    <span class="mr-2">🇺🇸 +1</span>
+                    <select class="bg-transparent outline-none mr-2">
+                        <option>🇺🇸 +1</option>
+                        <option>🇬🇧 +44</option>
+                        <option>🇨🇦 +1</option>
+                        <option>🇦🇺 +61</option>
+                        <option>🇵🇭 +63</option>
+                        <option>🇮🇳 +91</option>
+                        <option>🇨🇳 +86</option>
+                        <option>🇯🇵 +81</option>
+                        <option>🇩🇪 +49</option>
+                        <option>🇫🇷 +33</option>
+                        <option>🇪🇸 +34</option>
+                        <option>🇮🇹 +39</option>
+                        <option>🇧🇷 +55</option>
+                        <option>🇷🇺 +7</option>
+                        <option>🇰🇷 +82</option>
+                        <option>🇲🇽 +52</option>
+                        <option>🇿🇦 +27</option>
+                        <option>🇸🇦 +966</option>
+                        <option>🇦🇪 +971</option>
+                        <option>🇹🇷 +90</option>
+                        <option>🇮🇩 +62</option>
+                        <option>🇸🇬 +65</option>
+                        <option>🇲🇾 +60</option>
+                        <option>🇹🇭 +66</option>
+                        <option>🇻🇳 +84</option>
+                        <option>🇳🇿 +64</option>
+                        <option>🇦🇷 +54</option>
+                        <option>🇨🇱 +56</option>
+                        <option>🇨🇴 +57</option>
+                        <option>🇵🇰 +92</option>
+                        <option>🇧🇩 +880</option>
+                        <option>🇳🇬 +234</option>
+                        <option>🇪🇬 +20</option>
+                        <option>🇵🇱 +48</option>
+                        <option>🇳🇴 +47</option>
+                        <option>🇸🇪 +46</option>
+                        <option>🇩🇰 +45</option>
+                        <option>🇫🇮 +358</option>
+                        <option>🇧🇪 +32</option>
+                    </select>
                     <input type="tel" class="w-full outline-none" placeholder="Phone*" required>
                 </div>
+
+
 
                 <select class="w-full p-3 border border-gray-300 rounded-md focus:ring focus:ring-gray-400" required>
                     <option selected disabled>Please select country*</option>
