@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YUME Global</title>
-
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <style>
         #slider {
             cursor: grab;
@@ -32,24 +32,8 @@
 
 </head>
 <body>
-    <!-- Sticky Header -->
-    <header class="bg-black text-white p-4 fixed top-0 left-0 w-full z-10">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#">
-                <img src="{{ asset('img/yumeglobal-logo.png') }}" alt="YUME Logo" class="h-10">
-            </a>
-            <nav>
-                <ul class="flex space-x-6 uppercase text-sm">
-                    <li><a href="{{ route('index') }}" class="hover:text-orange-400">Home</a></li>
-                    <li><a href="{{ route('publishing') }}" class="hover:text-orange-400">Publishing</a></li>
-                    <li><a href="{{ route('affiliate') }}" class="hover:text-orange-400">Affiliate</a></li>
-                    <li><a href="{{ route('rewards') }}" class="hover:text-orange-400">Rewards</a></li>
-                    <li><a href="{{ route('faq') }}" class="hover:text-orange-400">FAQ</a></li>
-                    <li><a href="{{ route('login') }}" class="hover:text-orange-400">Sign In</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+
+    @include('layouts.header')
 
     <!-- Main Content -->
     <main class="flex-grow flex items-center justify-center p-10 mt-16">

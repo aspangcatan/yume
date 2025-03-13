@@ -5,75 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YUME</title>
     <link rel="icon" href="{{ asset('img/yume-logo.png') }}" type="image/png">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Hide scrollbar for the carousel */
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-
-        .scrollbar-hide {
-            -ms-overflow-style: none; /* IE and Edge */
-            scrollbar-width: none; /* Firefox */
-        }
-
-        .text-yume {
-            color: #FF7F3F;
-        }
-
-        .bg-yume-contrast {
-            background-color: rgb(153, 139, 252);
-        }
-
-        .bg-yume-contrast:hover {
-            background-color: rgb(100, 79, 251);
-        }
-
-        .bg-yume {
-            background-color: #ff7F3F;
-        }
-
-        .bg-yume:hover {
-            background-color: rgb(255,91,13);
-        }
-
-        #mobile-menu-btn {
-            cursor: pointer;
-        }
-
-        /* Mobile Menu Animation */
-        #mobile-menu.show {
-            display: flex;
-            animation: slideDown 0.3s ease-out;
-        }
-
-        /* Prevent scrolling when menu is open */
-        body.menu-open {
-            overflow: hidden;
-            height: 100%; /* Optional, prevents height shifts */
-        }
-
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        #main-header {
-            background-color: transparent;
-            transition: background-color 0.3s ease;
-        }
-
-        #main-header.scrolled {
-            background-color: #0D0D0D; /* Adjust to match your desired color */
-        }
-    </style>
 </head>
 <body class="bg-gray-100">
 
@@ -82,7 +15,7 @@
 <section class="relative bg-black text-white">
     <div class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 w-full h-full">
-        <img src="{{ asset('img/02-Publishing.jpg') }}" 
+        <img src="{{ asset('img/02-Publishing.jpg') }}"
             alt="Background"
             class="w-full h-full object-contain sm:object-left md:object-center pt-20">
         </div>
