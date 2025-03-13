@@ -12,18 +12,62 @@
 
 @include('layouts.header')
 
-<section class="relative bg-black text-white">
+<!-- <section class="relative bg-black text-white">
     <div class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background Image with Offset -->
         <div class="absolute inset-0 w-full h-full">
             <img src="{{ asset('img/03-Affiliate.jpg') }}"
             alt="Background"
             class="w-full h-full object-contain sm:object-left md:object-center pt-20">
 
         </div>
+    </div>
+</section> -->
+
+
+<section id="hero" class="relative bg-black text-white">
+    <div class="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
+        <!-- Background Gradient and Subtle Waves -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-gray-900 to-black opacity-90"></div>
+
+        <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
+            <svg class="w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="wave-pattern" width="100" height="100" patternUnits="userSpaceOnUse">
+                        <path d="M0 50 Q25 0 50 50 T100 50" fill="none" stroke="rgba(255,255,255,0.12)"
+                              stroke-width="2"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#wave-pattern)"/>
+            </svg>
         </div>
+
+        <!-- Animated Equalizer Bars -->
+        <div class="absolute bottom-0 left-0 right-0 h-24 flex items-end justify-center space-x-2 z-0">
+            <div class="w-3 bg-pink-500 animate-pulse h-10"></div>
+            <div class="w-3 bg-blue-500 animate-pulse h-14 delay-100"></div>
+            <div class="w-3 bg-purple-500 animate-pulse h-18 delay-200"></div>
+            <div class="w-3 bg-pink-500 animate-pulse h-12 delay-300"></div>
+            <div class="w-3 bg-blue-500 animate-pulse h-16 delay-400"></div>
+        </div>
+
+        <!-- Main Banner Content -->
+        <div class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 w-full h-full">
+                <img src="{{ asset('img/03-Affiliate.jpg') }}"
+                alt="Background"
+                class="w-full h-full object-contain sm:object-left md:object-center pt-20">
+
+            </div>
+        </div>
+
+        <!-- Ambient Neon Blobs -->
+        <div
+            class="absolute top-0 left-0 w-72 h-72 bg-blue-500 rounded-full blur-3xl opacity-30 mix-blend-screen"></div>
+        <div
+            class="absolute bottom-0 right-0 w-72 h-72 bg-pink-500 rounded-full blur-3xl opacity-30 mix-blend-screen"></div>
     </div>
 </section>
+
 
 <section id="feature-sections" class="bg-white py-20">
     <div class="container mx-auto px-12">
