@@ -7,11 +7,11 @@
 
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center space-x-6">
-            <a href="{{ route('index') }}" class="text-white hover:text-yume font-medium transition">Home</a>
-            <a href="{{ route('publishing') }}" class="text-white hover:text-yume font-medium transition">Publishing</a>
-            <a href="{{ route('affiliate') }}" class="text-white hover:text-yume font-medium transition">Affiliate</a>
-            <a href="{{ route('rewards') }}" class="text-white hover:text-yume font-medium transition">Rewards</a>
-            <a href="{{ route('faq') }}" class="text-white hover:text-yume font-medium transition">FAQ</a>
+            <a href="{{ route('index') }}" class="text-white hover:text-yume font-bold transition">Home</a>
+            <a href="{{ route('publishing') }}" class="text-white hover:text-yume font-bold transition">Publishing</a>
+            <a href="{{ route('affiliate') }}" class="text-white hover:text-yume font-bold transition">Affiliate</a>
+            <a href="{{ route('rewards') }}" class="text-white hover:text-yume font-bold transition">Rewards</a>
+            <a href="{{ route('faq') }}" class="text-white hover:text-yume font-bold transition">FAQ</a>
 
             <!-- Wrapping Sign In button in a flex container to align properly -->
             <div class="flex items-center">

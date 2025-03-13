@@ -14,10 +14,10 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            background-image: url('{{ asset('img/bgloginpage.png') }}');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+        
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+            url('{{ asset('img/streamingMusic.png') }}');
+            
             overflow-y: hidden;
         }
 
@@ -138,5 +138,29 @@
 
     <!-- scripts here -->
     <script src="{{ asset('javascripts/myjs.js') }}?v={{ time() }}"></script>
+    <script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function toggleNavbarBackground() {
+        const header = document.getElementById('main-header');
+        const hero = document.getElementById('hero');
+
+        const heroBottom = hero.offsetTop + hero.offsetHeight;
+        if (window.scrollY > heroBottom - 60) { // 60px buffer to catch right at transition
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+
+    window.addEventListener('scroll', toggleNavbarBackground);
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        document.body.classList.toggle('menu-open');  // Disable or enable scrolling
+    });
+
+</script>
 </body>
 </html>
