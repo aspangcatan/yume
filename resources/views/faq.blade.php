@@ -10,30 +10,46 @@
 </head>
 <body class="bg-gray-100">
 @include('layouts.header')
-<section id="hero" class="relative bg-black text-white">
-    <div class="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
+<section id="hero" class="bg-black text-white">
+    <div class="w-full h-[70vh] flex flex-col items-center justify-center overflow-hidden relative">
         <!-- Background Gradient and Subtle Waves -->
-        <div class="absolute inset-0 bg-gradient-to-r from-black via-gray-900 to-black opacity-90"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-gray-800 to-black opacity-70"></div>
 
-        <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
-            <svg class="w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <pattern id="wave-pattern" width="100" height="100" patternUnits="userSpaceOnUse">
-                        <path d="M0 50 Q25 0 50 50 T100 50" fill="none" stroke="rgba(255,255,255,0.12)"
-                              stroke-width="2"/>
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#wave-pattern)"/>
-            </svg>
-        </div>
+        <svg class="absolute inset-0 w-full h-full opacity-5" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="wave-pattern" width="100" height="100" patternUnits="userSpaceOnUse">
+                    <path d="M0 50 Q25 0 50 50 T100 50" fill="none"
+                          stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#wave-pattern)"/>
+        </svg>
+
         <!-- Main Banner Content -->
-        <div class="relative z-10 text-center px-6">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-wide uppercase">
+        <div class="text-center px-6 w-full max-w-3xl relative">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-wide uppercase text-white">
                 Frequently Asked Questions
             </h1>
+            <p class="mt-4 text-lg md:text-2xl font-light tracking-wide text-white">
+                Find answers to the most common questions below.
+            </p>
+            <p class="mt-2 text-sm md:text-lg tracking-wide text-gray-200">
+                Still need help? Feel free to contact us directly.
+            </p>
+
+            <div class="mt-8">
+                <a href="{{ route('contact') }}"
+                   class="inline-block px-12 py-4 text-xl font-extrabold text-white rounded-full
+                          shadow-2xl bg-yume transform hover:scale-105 focus:scale-105
+                          transition-transform duration-300 ease-out shadow-pink-400/50
+                          tracking-wide md:px-16 md:py-6 md:text-3xl">
+                    Contact Us
+                </a>
+            </div>
         </div>
     </div>
 </section>
+
 <section class="bg-gray-100 py-16">
     <div class="container mx-auto px-6">
         <div class="space-y-6 max-w-4xl mx-auto">
@@ -471,7 +487,8 @@
                                 is why the Direct Referral Commission can become so significant over time.
                             </p>
                             <div class="overflow-x-auto bg-white rounded-lg shadow mt-3">
-                                <table class="w-full table-auto border-collapse border border-gray-200 text-center text-center">
+                                <table
+                                    class="w-full table-auto border-collapse border border-gray-200 text-center text-center">
                                     <thead class="bg-gray-100">
                                     <tr class="bg-gray-100 text-gray-700">
                                         <th class="border border-gray-200 px-4 py-2">Level</th>
@@ -621,7 +638,8 @@
                                     </span>
 
                                     <div class="overflow-x-auto bg-white rounded-lg shadow mt-3">
-                                        <table class="w-full table-auto border-collapse border border-gray-200 text-center">
+                                        <table
+                                            class="w-full table-auto border-collapse border border-gray-200 text-center">
                                             <thead class="bg-gray-100">
                                             <tr class="bg-gray-100 text-gray-700">
                                                 <th class="border border-gray-200 px-4 py-2">Level/Rank</th>
@@ -689,7 +707,8 @@
                                 that month divided by the overall number of Streaming Points for the same month.
                             </p>
                             <div class="overflow-x-auto bg-white rounded-lg shadow mt-3">
-                                <table class="w-full table-auto border-collapse border border-gray-200 text-center text-center">
+                                <table
+                                    class="w-full table-auto border-collapse border border-gray-200 text-center text-center">
                                     <thead class="bg-gray-100">
                                     <tr class="bg-gray-100 text-gray-700">
                                         <th class="border border-gray-200 px-4 py-2">Rank</th>
@@ -1052,6 +1071,7 @@
         </div>
     </div>
 </section>
+@include('layouts.footer')
 <script>
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');

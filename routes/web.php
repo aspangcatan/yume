@@ -43,6 +43,14 @@ Route::get('/register', function () {
     return view('register');
 })->name('register');
 
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
+Route::get('/policy', function () {
+    return view('policy');
+})->name('policy');
+
 Route::get('/authentication', function () {
     return view('authentication');
 })->name('authentication');
