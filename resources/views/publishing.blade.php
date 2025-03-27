@@ -12,16 +12,6 @@
 
 @include('layouts.header')
 
-<!-- <section class="relative bg-black text-white">
-    <div class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 w-full h-full">
-        <img src="{{ asset('img/02-Publishing.jpg') }}"
-            alt="Background"
-            class="w-full h-full object-contain sm:object-left md:object-center pt-20">
-        </div>
-    </div>
-</section> -->
-
 <section id="hero" class="relative bg-black text-white">
     <div class="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
         <!-- Background Gradient and Subtle Waves -->
@@ -51,7 +41,7 @@
         <!-- Main Banner Content -->
         <div class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 w-full h-full">
-                <img src="{{ asset('img/02-Publishing.jpg') }}"
+                <img src="{{ asset('img/02-Publishing.png') }}"
                     alt="Background"
                     class="w-full h-full object-contain sm:object-left md:object-center pt-20">
             </div>
