@@ -49,7 +49,7 @@
         <!-- Main Banner Content -->
         <div class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 w-full h-full">
-                <img src="{{ asset('img/04-Rewards.jpg') }}"
+                <img src="{{ asset('img/04-Rewards.png') }}"
                 alt="Background"
                 class="w-full h-full object-contain sm:object-left md:object-center pt-20">
             </div>
