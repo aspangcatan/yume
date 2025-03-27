@@ -119,7 +119,7 @@
             <!-- Image Section -->
             <div class="relative text-center">
                 <div class="relative rounded-lg overflow-hidden w-full max-w-md mx-auto">
-                    <img src="{{ asset('img/img-section-1.png') }}" alt="YUME Platform Showcase" class="w-full h-auto">
+                    <img src="{{ asset('img/landing-page-1.png') }}" alt="YUME Platform Showcase" class="w-full h-auto">
                 </div>
             </div>
         </div>
@@ -178,7 +178,7 @@
             <!-- Image Section -->
             <div class="order-2 md:order-1 text-center">
                 <div class="relative rounded-lg overflow-hidden w-full max-w-md mx-auto">
-                    <img src="{{ asset('img/img-section-2.png') }}" alt="Aspiring Artist Platform"
+                    <img src="{{ asset('img/landing-page-2.png') }}" alt="Aspiring Artist Platform"
                          class="w-full h-auto">
                 </div>
             </div>
@@ -270,6 +270,7 @@
 
     </div>
 </section>
+
 <section class="py-16 bg-white-900">
     <div class="container mx-auto px-6 md:px-12 lg:px-20">
         <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -308,7 +309,7 @@
             <!-- Image Section -->
             <div class="relative text-center">
                 <div class="relative rounded-lg overflow-hidden w-full max-w-md mx-auto">
-                    <img src="{{ asset('img/img-section-5.png') }}" alt="YUME Platform Showcase" class="w-full h-auto">
+                    <img src="{{ asset('img/landing-page-3.png') }}" alt="YUME Platform Showcase" class="w-full h-auto">
                 </div>
             </div>
         </div>
@@ -342,10 +343,9 @@
                 Create an Account
             </a>
         </div>
-
-
     </div>
 </section>
+
 <section id="feature-sections" class="bg-white py-16">
     <div class="container mx-auto px-6">
         <div class="text-center mb-12">
