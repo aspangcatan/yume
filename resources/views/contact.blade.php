@@ -63,7 +63,7 @@
                 Contact Us
             </h1>
 
-            <form action="#" method="POST" class="space-y-4">
+            <form id="contactForm" action="{{ route('sendContactEmail') }}" method="POST" class="space-y-4">
                 @csrf
 
                 <input type="text" name="full_name" placeholder="Full Name" required
@@ -93,49 +93,111 @@
         </div>
     </div>
 </section>
+
+<!-- Loading Overlay -->
+<div id="loadingOverlay" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+    <div class="flex flex-col items-center">
+        <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-white"></div>
+        <p class="text-white mt-2">Sending...</p>
+    </div>
+</div>
+
+<!-- Success Modal (Ensuring It Stays in Front) -->
+<div id="successModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+    <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+        <h2 class="text-lg font-semibold text-green-600">Message Sent Successfully!</h2>
+        <p class="text-gray-600 mt-2">Thank you for reaching out. We will get back to you soon.</p>
+        <button id="closeModal" class="mt-4 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">
+            OK
+        </button>
+    </div>
+</div>
+
+
 @include('layouts.footer')
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const faqToggles = document.querySelectorAll('.faq-toggle');
+    $(document).ready(function () {
+        const $mobileMenuBtn = $('#mobile-menu-btn');
+        const $mobileMenu = $('#mobile-menu');
+        const $faqToggles = $('.faq-toggle');
+        const $header = $('#main-header');
+        const $hero = $('#hero');
+        const $contactForm = $('#contactForm');
+        const $successModal = $('#successModal');
+        const $loadingOverlay = $('#loadingOverlay');
 
-    function toggleNavbarBackground() {
-        const header = document.getElementById('main-header');
-        const hero = document.getElementById('hero');
-
-        const heroBottom = hero.offsetTop + hero.offsetHeight;
-        if (window.scrollY > heroBottom - 60) { // 60px buffer to catch right at transition
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+        // ✅ Navbar background change on scroll
+        function toggleNavbarBackground() {
+            let heroBottom = $hero.offset().top + $hero.outerHeight();
+            if ($(window).scrollTop() > heroBottom - 60) {
+                $header.addClass('scrolled');
+            } else {
+                $header.removeClass('scrolled');
+            }
         }
-    }
+        $(window).on('scroll', toggleNavbarBackground);
 
-    window.addEventListener('scroll', toggleNavbarBackground);
+        // ✅ FAQ Toggle
+        $faqToggles.on('click', function () {
+            let $content = $(this).next();
+            let $icon = $(this).find('svg');
 
-    faqToggles.forEach(toggle => {
-        toggle.addEventListener('click', () => {
-            const content = toggle.nextElementSibling;
-            const icon = toggle.querySelector('svg');
+            $content.toggleClass('hidden');
+            $icon.toggleClass('rotate-180');
 
-            content.classList.toggle('hidden');
-            icon.classList.toggle('rotate-180');
+            // Close other FAQ items
+            $faqToggles.not(this).next().addClass('hidden');
+            $faqToggles.not(this).find('svg').removeClass('rotate-180');
+        });
 
-            // Close others (optional - remove if you want multiple open at once)
-            faqToggles.forEach(otherToggle => {
-                if (otherToggle !== toggle) {
-                    otherToggle.nextElementSibling.classList.add('hidden');
-                    otherToggle.querySelector('svg').classList.remove('rotate-180');
+        // ✅ Mobile menu toggle
+        $mobileMenuBtn.on('click', function () {
+            $mobileMenu.toggleClass('hidden');
+            $('body').toggleClass('menu-open'); // Toggle scrolling restriction
+        });
+
+        // ✅ AJAX Contact Form Submission (Fetch API + Loading Indicator)
+        $contactForm.on('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            let formData = new FormData(this);
+
+            // Show loading overlay
+            $loadingOverlay.removeClass('hidden');
+
+            fetch("{{ url('/contact') }}", {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "X-CSRF-TOKEN": $('input[name="_token"]').val()
                 }
-            });
+            })
+                .then(response => response.json())
+                .then(data => {
+                    $loadingOverlay.addClass('hidden'); // Hide loading
+                    if (data.success) {
+                        $successModal.removeClass('hidden'); // Show success modal
+                        $successModal.css('z-index', '9999'); // Ensure modal is in front
+                        $contactForm[0].reset(); // Clear form fields
+                    } else {
+                        alert("Error sending message. Please try again.");
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    $loadingOverlay.addClass('hidden'); // Hide loading
+                    alert("An error occurred. Please try again later.");
+                });
+        });
+
+        // ✅ Close Success Modal
+        $('#closeModal').on('click', function () {
+            $successModal.addClass('hidden');
         });
     });
-
-    mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        document.body.classList.toggle('menu-open');  // Disable or enable scrolling
-    });
 </script>
+
 </body>
 </html>

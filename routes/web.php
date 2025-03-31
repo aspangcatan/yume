@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CrmController;
 use App\Http\Controllers\SfaController;
 use Illuminate\Support\Facades\Route;
@@ -54,6 +55,8 @@ Route::get('/policy', function () {
 Route::get('/authentication', function () {
     return view('authentication');
 })->name('authentication');
+
+Route::post('/contact', [ContactController::class, 'sendContactEmail'])->name('sendContactEmail');
 
 Route::get('/profile', function () {
     $user =

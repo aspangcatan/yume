@@ -7,8 +7,8 @@
                 - All rights reserved. |
                 <a href="{{ route('contact') }}" class="text-blue-400 hover:underline">Contact</a> |
                 <a href="{{ route('faq') }}" class="text-blue-400 hover:underline">FAQ</a> |
-                <a href="https://www.yume.global/privacy-policy.php" class="text-blue-400 hover:underline">Privacy Policy</a> |
-                <a href="terms-condition.php" class="text-blue-400 hover:underline">Terms & Conditions</a>
+                <a href="#" class="text-blue-400 hover:underline">Privacy Policy</a> |
+                <a href="#" class="text-blue-400 hover:underline">Terms & Conditions</a>
             </p>
         </div>
     </div>
