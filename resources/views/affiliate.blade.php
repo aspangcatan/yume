@@ -561,8 +561,10 @@
           <p class="text-sm">No Activation Fee</p>
           <p class="text-4xl font-bold my-4">$0</p>
           <p class="text-sm mb-4">No Annual Fee</p>
+          <br>
+          <p class="text-sm mb-4">NO INCOME :</p>
           <ul class="text-sm space-y-1">
-            <li>- Limited Earning</li>
+            <li>- Unlimited Streaming</li>
             <li>- Discover New Artists</li>
             <li>- Accumulate Streaming Points</li>
           </ul>
@@ -576,12 +578,15 @@
       <div class="bg-[#0c2340] text-white rounded-lg p-6 flex flex-col justify-between">
         <div>
           <h3 class="text-2xl font-bold mb-1">STUDENT</h3>
-          <p class="text-sm">For 18-24 Years Old</p>
+          <p class="text-sm">For 16-24 Years Old</p>
           <p class="text-4xl font-bold my-4">$45</p>
           <p class="text-sm mb-4">One Time Activation Fee<br>$12.87 Annually</p>
+          <br>
+          <p class="text-sm mb-4">2-WAYS TO EARN :</p>
           <ul class="text-sm space-y-1">
-            <li>- Stream & Earn</li>
-            <li>- Eligible for Concert Ticket Rewards</li>
+            <li>- Streaming Income</li>
+            <li>- Direct Referral Bonus</li>
+            <li>- Eligible for Concert Ticket promos</li>
           </ul>
         </div>
         <a href="#" class="mt-6 inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-full text-center">
@@ -596,9 +601,12 @@
           <p class="text-sm">For 60 and Older</p>
           <p class="text-4xl font-bold my-4">$45</p>
           <p class="text-sm mb-4">One Time Activation Fee<br>$12.87 Annually</p>
+          <br>
+          <p class="text-sm mb-4">2-WAYS TO EARN :</p>
           <ul class="text-sm space-y-1">
-            <li>- Stream & Earn</li>
-            <li>- Eligible for Concert Ticket Rewards</li>
+            <li>- Streaming Income</li>
+            <li>- Direct Referral Bonus</li>
+            <li>- Eligible for Concert Ticket promos</li>
           </ul>
         </div>
         <a href="#" class="mt-6 inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-full text-center">
@@ -610,12 +618,15 @@
       <div class="bg-[#0c2340] text-white rounded-lg p-6 flex flex-col justify-between">
         <div>
           <h3 class="text-2xl font-bold mb-1">BASIC</h3>
-          <p class="text-sm">For 18 and Over</p>
+          <p class="text-sm">For 16 and Over</p>
           <p class="text-4xl font-bold my-4">$60</p>
           <p class="text-sm mb-4">One Time Activation Fee<br>$25.87 Annually</p>
+          <br>
+          <p class="text-sm mb-4">2-WAYS TO EARN :</p>
           <ul class="text-sm space-y-1">
-            <li>- Stream & Earn</li>
-            <li>- Eligible for Concert Ticket Rewards</li>
+            <li>- Streaming Income</li>
+            <li>- Direct Referral Bonus</li>
+            <li>- Eligible for Concert Ticket promos</li>
           </ul>
         </div>
         <a href="#" class="mt-6 inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-full text-center">
@@ -627,16 +638,20 @@
       <div class="bg-[#0c2340] text-white rounded-lg p-6 flex flex-col justify-between">
         <div>
           <h3 class="text-2xl font-bold mb-1">PREMIUM</h3>
-          <p class="text-sm">For 18 and Over</p>
+          <p class="text-sm">For 16 and Over</p>
           <p class="text-4xl font-bold my-4">$120</p>
           <p class="text-sm mb-4">One Time Activation Fee<br>$4.99 Monthly Subscription</p>
+          <br>
+          <p class="text-sm mb-4">FULL COMPENSATION PLAN :</p>
           <ul class="text-sm space-y-1">
-            <li>- Add Streaming Income</li>
-            <li>- Stream & Earn</li>
-            <li>- Early Access Opportunities</li>
-            <li>- Eligible for Concert Ticket Rewards</li>
-            <li>- Access to Product Purchases</li>
-            <li>- Access to Reward Program</li>
+            <li>- Ad free Streaming experience</li>
+            <li>- Stream income</li>
+            <li>- Share and earn</li>
+            <li>- Eligible for Concert Ticket promos</li>
+            <li>- Early Access Privilege</li>
+            <li>- Discount on Merch purchases</li>
+            <li>- Discount on Product purchases</li>
+            <li>- Access to rewards programs</li>
           </ul>
         </div>
         <a href="#" class="mt-6 inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-full text-center">
