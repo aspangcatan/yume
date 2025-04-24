@@ -38,14 +38,44 @@
             <div class="w-3 bg-blue-500 animate-pulse h-16 delay-400"></div>
         </div>
 
-        <!-- Main Banner Content -->
+        <!-- <div class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+            {{-- Background via CSS --}}
+            <div
+            class="absolute inset-0 z-0 bg-center bg-cover"
+            style="background-image: url('{{ asset('img/02-Publishing.png') }}');"
+            ></div>
+
+            {{-- Floating Join Now Button --}}
+            <a
+            href=""
+            class="relative z-10 bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-transform transform hover:-translate-y-1"
+            style="bottom: 3rem; right: 3rem;"
+            >
+            JOIN NOW
+            </a>
+        </div> -->
+
+        <!--Main Banner-->
         <div class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-            <div class="absolute inset-0 w-full h-full">
-                <img src="{{ asset('img/02-Publishing.png') }}"
-                    alt="Background"
-                    class="w-full h-full object-contain sm:object-left md:object-center pt-20">
-            </div>
+        {{-- Background via CSS --}}
+        <div
+            class="absolute inset-0 z-0 bg-center bg-cover"
+            style="background-image: url('{{ asset('img/02-Publishing.png') }}');"
+        ></div>
+
+        {{-- Floating Join Now Button --}}
+        <a
+            href="#"
+            class="absolute bottom-36 right-32 z-10 bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg transition-transform transform hover:-translate-y-1"
+        >
+            JOIN NOW
+        </a>
         </div>
+
+
+
+
+
 
         <!-- Ambient Neon Blobs -->
         <div
@@ -58,88 +88,153 @@
 <section id="feature-sections" class="bg-white py-20">
     <div class="container mx-auto px-12">
         <div class="text-center mb-10">
-            <h2 class="text-3xl font-bold leading-tight">What is Music Publishing?</h2>
-            <div class="w-16 h-1 bg-gray-800 mx-auto my-4"></div>
+            <h1 class="text-5xl font-extrabold leading-tight" style="color: #FF7F3F;">What is Music Publishing?</h1>
+            <br>
+            <p class="text-lg leading-relaxed">
+            Music publishing is a vital component of the music industry, encompassing the management and protection of musical compositions and their associated rights.
+            It extends beyond printing sheet music to include licensing, royalty collection and intellectual property protection.
+            </p>
+            <br>
+            <div class="text-right">
+                <button class="bg-[#FF7F3F] text-white font-semibold px-6 py-2 rounded-full hover:bg-orange-600 transition">
+                    Learn More
+                </button>
+            </div>
         </div>
-
-        <p class="text-gray-700 text-lg mb-4">Music publishing is a crucial aspect of the music industry that involves the management of musical compositions and their associated rights. Contrary to what the term might suggest, it extends far beyond the act of printing sheet music.</p>
-
-        <p class="text-gray-700 text-lg mb-4">At its core, music publishing encompasses various activities, such as licensing, royalty collection, and the protection of intellectual property. Here's a breakdown of key components:</p>
-
-        <ul class="list-disc list-inside space-y-2 text-gray-700">
-            <li><strong>Licensing:</strong> Music publishers secure licenses for compositions in various mediums such as recordings, films, and advertisements.</li>
-            <li><strong>Royalty Collection:</strong> Ensuring songwriters and composers receive compensation for their work.</li>
-            <li><strong>Rights Management:</strong> Safeguarding composition rights, including copyright protection.</li>
-            <li><strong>Exploitation of Intellectual Property:</strong> Generating revenue from compositions through placements and covers.</li>
-            <li><strong>Administration:</strong> Handling contracts, licenses, and royalty distribution.</li>
-            <li><strong>Promotion and A&amp;R:</strong> Some publishers scout talent and support artists.</li>
-        </ul>
-
-        <p class="text-gray-700 text-lg mt-6">Music publishing serves as the bridge between the creative side and the commercial side, ensuring that artists' work is protected and monetized effectively.</p>
-
-        <h3 class="text-2xl font-semibold text-center mt-10">Global Music Publishing Market Overview</h3>
-
-        <p class="text-gray-700 text-lg mt-4">Music Publishing Market size was valued at <span class="text-red-600 font-bold">USD 5.96 Billion</span> in 2020 and is projected to reach <span class="text-red-600 font-bold">USD 9.35 Billion by 2028</span>, growing at a <span class="text-red-600 font-bold">CAGR of 5.90% from 2021 to 2028.</span></p>
-
-        <p class="text-gray-700 text-lg mt-4">Over the last 5 years, the music industry has gone through a revolution. The rise in popularity of music streaming services like Spotify and Pandora has led to a fall in sales of physical music. As the increasing number of artists and musicians require the personal service provided by music publishers to help them manage their music, copyrights, and other things; the demand for music publishers is high. Furthermore, the media industry has also done well in recent years owing to consumers shifting towards digital platforms.</p>
-
-        <p class="text-gray-700 text-lg mt-4">Additionally, consumers have started avoiding pirated music and started paying for it and this spending has led to increased revenue streams for the entertainment industry. </p>
-
-        <h3 class="text-2xl font-semibold text-center mt-10">Why publish your music with YUME?</h3>
-
-        <p class="text-gray-700 text-lg mt-4">When you publish a song with YUME, you are getting your music in front of a global audience. On top of getting your work published on over a hundred music streaming, download, and social platforms like Spotify, Apple Music, and TikTok, we are also allowing you to be heard by thousands of ready listeners on our platform and get all the tools that you need to promote and showcase your music.</p>
-
-        <p class="text-gray-700 text-lg mt-4">Discover how we ensure every YUME artist achieves worldwide success through YUME’s music ecosystem.</p>
-
-        <div class="text-center my-6">
-            <button onclick="window.open('#interest','_self')" class="bg-blue-600 text-white text-lg font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-700">Get Started</button>
-        </div>
-
-        <h3 class="text-2xl font-semibold mt-10">Traditional Publishing: A Quick Overview</h3>
-
-        <p class="text-gray-700 text-lg mt-4">Music publishing is essentially the structure of ownership of a song - along with this is how a song is protected, distributed, licensed, commercialized, and in the simplest terms, sold.</p>
-
-        <p class="text-gray-700 text-lg mt-4">When you create a song, you generate two copyrights:</p>
-        <ul class="list-disc list-inside space-y-2 text-gray-700">
-            <li>One for the composition and lyrics.</li>
-            <li>One for the recording, known as the “master” copy.</li>
-        </ul>
-
-        <p class="text-gray-700 text-lg mt-4">Artists that publish a song in the traditional way (via a publisher and a record label) tend to create deals that will “split” their shares with the copyright that they create to be able to sell their music. Publishing companies will have shared ownership with the copyright to composition in exchange for the service they provide, which includes promoting, licensing music so they can be used commercially, monitoring where songs are performed, and collecting royalties. Record labels, on the other hand, tend to own the recording copyright, because they finance the recording and do major legwork on making sure that artists gain enough exposure and build a robust fanbase.</p>
-
-        <p class="text-gray-700 text-lg mt-4">In short, traditional publishing takes most of the strain off the artist’s back when it comes to making their songs heard, but with a huge cost. With publishers and labels having ownership of an artist’s copyright, they will want to squeeze as much profit to get a return out of their investment. Some artists experience having to fulfill lengthy contracts, receive remarkably low royalty rates, and even go through loans that they will never be able to repay.</p>
-
-        <p class="text-gray-700 text-lg mt-4">Is it possible for you to release your music as an independent artist and get more control over your music? Yes, but with a caveat - it will take double or triple the effort to get your music out there, compared to having access to resources that publishers and labels provide.</p>
-
-        <p class="text-gray-700 text-lg mt-4">This is what YUME aims to disrupt, by introducing a model that will finally make the industry rewarding for both musicians and listeners.</p>
-        <div class="my-10">
-            <img class="w-full rounded-lg shadow-md" src="{{ asset('img/mid-banner.jpg') }}" alt="Music Publishing Banner">
-        </div>
-
-        <div class="text-center my-6">
-            <button onclick="window.open('#interest','_self')" class="bg-blue-600 text-white text-lg font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-700">Get Started</button>
-        </div>
-
-        <h3 class="text-2xl font-semibold text-center mt-10">How YUME Changes the Music Publishing Landscape</h3>
-
-        <p class="text-gray-700 text-lg mt-4">YUME understands that the music industry is a venture in which fans and listeners are its major stakeholders. This is why fans and listeners deserve to get a more rewarding experience - a share in the billion-dollar music streaming industry.</p>
-
-        <p class="text-gray-700 text-lg mt-4">YUME empowers fans and listeners by rewarding every task fulfilled on our streaming platform - each time they listen to music published on YUME or watch a video, they get points that they can convert into raffle tickets or other prizes. YUME has also built a robust affiliate program that allows its members to enjoy multiple revenue streams. This effectively makes listening to music, a previously paid experience, a source of income.</p>
-
-        <p class="text-gray-700 text-lg mt-4">This will be a game-changer for independent artists - not only do they get an instant boost for their streams, but they also get to publish their music in an instant fan-generating platform that rewards their listeners for every engagement. On top of its streaming platform, YUME also publishes artist tracks on hundreds of other streaming platforms, including major players such as Spotify, Deezer, YouTube Music, and TikTok, maximizing the presence of every release.</p>
-        <h3 class="text-2xl font-semibold text-center mt-10">Beyond Streaming</h3>
-
-        <p class="text-gray-700 text-lg mt-4">YUME is also not just a streaming platform designed for your latest track to be organically discovered - it is a complete ecosystem that provides all the tools a music artist needs to succeed. Get the chance to be part of YUME’s global campaigns, build up your artist profiles with dedicated branding managers, and get insights on how your tracks perform so you can plan your career better.</p>
-
-        <p class="text-gray-700 text-lg mt-4">Ready to go live? </p>
-
-        <p class="text-gray-700 text-lg mt-4">We will amplify your presence with expert marketing campaigns - get ready to be the front act of an international sensation or be the main act of your major first concert, with world-class event organizers and providers supporting your shows.</p>
-        <p class="text-gray-700 text-lg mt-4">Welcome to your dream, now made a reality.</p>
     </div>
 </section>
 
+<section>
+<div class="bg-gray-100 rounded-lg text-gray-800 space-y-6 
+            px-4 md:px-40 py-10 mx-auto max-w-screen-lg">
+        <div>
+            <h2 class="text-2xl font-bold mb-2">Key Components</h2>
+            <ul class="list-disc list-inside space-y-2 ml-4 md:ml-10">
+            <li><strong>Licensing:</strong> Securing licenses for composition use in various mediums, such as recordings, performances and commercial projects.</li>
+            <li><strong>Royalty Collection:</strong> Ensuring songwriters and composers receive compensation for their work’s use, involving tracking and collecting royalties.</li>
+            <li><strong>Rights Management:</strong> Safeguarding composition rights, including copyright protection to ensure creators’ acknowledgment and compensation.</li>
+            <li><strong>Exploitation of Intellectual Property:</strong> Actively seeking revenue opportunities from compositions, such as placements in movies, TV shows and commercials.</li>
+            <li><strong>Administration:</strong> Handling business tasks, including contract negotiation, license management and royalty distribution.</li>
+            <li><strong>Promotion and A&R:</strong> Scouting talent and supporting songwriters and artists.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-bold mb-2">The Role of YUME</h2>
+            <p class="ml-4 md:ml-10">
+            YUME empowers artists with a comprehensive platform to share their music worldwide ensuring listener support and encouragement.
+            We provide cutting-edge tools for digital promotion, showcasing talent and electrifying live performances on the global stage.
+            </p>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-bold mb-2">Key Benefits Include</h2>
+            <ul class="list-disc list-inside space-y-2 ml-4 md:ml-10">
+            <li><strong>Global Reach:</strong> Publishing music on over 100 platforms, including Yume, Spotify, Apple Music and TikTok.</li>
+            <li><strong>Revenue Streams:</strong> Empowering fans through rewards for listening support and engagement.</li>
+            <li><strong>Artist Support:</strong> Providing resources, branding managers and performance insights.</li>
+            <li><strong>Merchandising and NFT:</strong> Unlock additional layers of income through merchandise and NFTs.</li>
+            <li><strong>Marketing and Events:</strong> Amplifying artist presence through campaigns and world-class live event bookings.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="my-10">
+        <img class="w-full shadow-md" src="{{ asset('img/mid-banner.jpg') }}" alt="Music Publishing Banner">
+    </div>
+
+</section>
+
+<section>
+<h1 class="text-5xl font-extrabold leading-tight text-center" style="color: #FF7F3F;">Join the YUME Community</h1>
+</section>
+<br>
+<section>
+  <!-- Full‑width gradient container -->
+  <div class="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800
+              flex flex-col items-center justify-center min-h-screen
+              py-6
+              space-y-8
+              text-white
+              overflow-hidden">
+    
+    <!-- Inner wrapper for responsive gutters & max content width -->
+    <div class="w-full px-4 md:px-12 lg:px-24 xl:px-40">
+      <div class="max-w-screen-lg mx-auto space-y-8">
+        {{-- Hero Text --}}
+        <div>
+          <p class="mb-8 text-base md:text-lg leading-relaxed">
+            Elevate your musical journey to new heights with YUME. We invite visionary artists, skilled songwriters and passionate music enthusiasts to join our dynamic community.
+          </p>
+        </div>
+
+        {{-- Unlock Endless Opportunities --}}
+        <div>
+          <h2 class="text-2xl md:text-3xl text-orange-400 font-bold mb-3">
+            Unlock Endless Opportunities
+          </h2>
+          <p class="text-base md:text-lg leading-relaxed">
+            <span class="font-semibold">Celebrate Your Passion:</span> Share your music with a community that acknowledges and celebrates your creativity.
+        </p>
+        <p class="text-base md:text-lg leading-relaxed">
+        <span class="font-semibold">Recognize Your Talent:</span> Gain the recognition you deserve for your unique sound and style.
+      </p>
+      <p class="text-base md:text-lg leading-relaxed">
+        <span class="font-semibold">Contribute to Something Extraordinary:</span> Every note, melody and beat contributes to a collective symphony that resonates within our vibrant community.
+      </p>
+        </div>
+
+        {{-- Take the Leap --}}
+        <div>
+          <h2 class="text-2xl md:text-3xl text-orange-400 font-bold mb-3">
+            Take the Leap
+          </h2>
+          <p class="mb-8 text-base md:text-lg leading-relaxed">
+            Join YUME and transform your musical aspirations into something truly exceptional. Let YUME be the stage where your music comes alive.
+          </p>
+        </div>
+
+        {{-- Benefits of Joining --}}
+        <div>
+          <h2 class="text-2xl md:text-3xl text-orange-400 font-bold mb-3">
+            Benefits of Joining
+          </h2>
+          <p class="text-base md:text-lg leading-relaxed">
+        <span class="font-semibold">Meticulous Music Management:</span> Trust us to handle the business side, freeing you to focus on your craft.
+      </p>
+      <p class="text-base md:text-lg leading-relaxed">
+        <span class="font-semibold">Global Reach:</span> Publish your music on over 100 platforms, including Yume, Spotify, Apple Music and TikTok.
+      </p>
+      <p class="text-base md:text-lg leading-relaxed">
+        <span class="font-semibold">Revenue Streams:</span> Empower your fans through rewards for listening support and engagement.
+      </p>
+      <p class="text-base md:text-lg leading-relaxed">
+        <span class="font-semibold">Maximize Your Earnings:</span> Boost revenue through royalties, merchandising, NFTs, booked live performances and referrals.
+      </p>
+      <p class="text-base md:text-lg leading-relaxed">
+        <span class="font-semibold">Artist Support:</span> Access resources, branding managers to fuel your success.
+      </p>
+        </div>
+
+        {{-- Embark on a Musical Odyssey --}}
+        <div>
+          <h2 class="text-2xl md:text-3xl text-orange-400 font-bold mb-3">
+            Embark on a Musical Odyssey
+          </h2>
+          <p class="text-base md:text-lg leading-relaxed">
+            YUME awaits. Take the first step toward unlocking your full musical potential.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 <section class="bg-gray-100 flex items-center justify-center min-h-screen px-6">
-        <div class="max-w-3xl bg-white shadow-lg rounded-lg p-8 my-10">
+
+    <div class="max-w-3xl bg-white shadow-lg rounded-lg p-8 my-10">
+        <h1 class="text-4xl font-extrabold leading-tight text-center" style="color: #FF7F3F;">ARTIST SUBMISSION FORM</h1>
             <h2 class="text-center text-xl font-bold uppercase tracking-wider mb-4">
                 Embark on a Musical Odyssey!
             </h2>
